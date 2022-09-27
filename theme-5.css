@@ -1,12 +1,12 @@
 :root {
     --txtMainColor: black;     /* Цвет основного текста */
-    --link1Color: #7ccaae;     /* Цвет 1 ссылки */
-    --link2Color: #ecec84;     /* Цвет 2 ссылки */
-    --link3Color: #ffb69b;     /* Цвет 3 ссылки */
+    --link1Color: #5a8100;     /* Цвет 1 ссылки */
+    --link2Color: #ffb400;     /* Цвет 2 ссылки */
+    --link3Color: #ff6c02;     /* Цвет 3 ссылки */
 }
 
 body {
-    background-color: #a299ca;
+    background-color: #fff9e9;
     color: var(--txtMainColor);
 }
 

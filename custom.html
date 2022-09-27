@@ -5,28 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="theme-light.css" id="theme">
+    <link rel="stylesheet" type="text/css" href="theme-1.css" id="theme">
     <title>Document</title>
     <style> @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap'); </style>  
     </head>   
 <body>
-    <div class="header">
-        <a class="img-dots" href="index.html" >
-            <i class="moveToRight" style="--order: 3"><img class="dot1" src="img/dot.png"></i>
-            <i class="moveToRight" style="--order: 2"><img class="dot2" src="img/dot.png"></i>
-            <i class="moveToRight" style="--order: 1"><img class="dot3" src="img/dot.png"></i>
+    <div class="header flex">
+        <a class="img-dots flex" href="index.html" >
+            <i class="moveToRight dot1" style="--order: 2"></i>
+            <i class="moveToRight dot2" style="--order: 1.5"></i>
+            <i class="moveToRight dot3" style="--order: 1"></i>
         </a>
         <nav>
-            <a href='#' class="nav-link link-1 dropDown" style="--order: 6">leaderbaord</a>
-            <a href='#' class="nav-link link-2 dropDown" style="--order: 7">customization</a>
-            <a href='#' class="nav-link link-3 dropDown" style="--order: 8">account</a>
+            <a href='#' class="nav-link link-1 dropDown" style="--order: 3">leaderbaord</a>
+            <a href='custom.html' class="nav-link link-2 dropDown" style="--order: 3.5">customization</a>
+            <a href='#' class="nav-link link-3 dropDown" style="--order: 4">account</a>
 <!--            <input type="button" value="Dark theme" onclick="changeBackground()">-->
         </nav>
     </div>
     <main>
-        <h1 class="moveTop">
-            Themes:
-        </h1>
+            <h1 class="moveTop">
+                Themes:
+            </h1>
         <ul class="moveTop" style="--order: 6">
             <li>
                 <div>
@@ -34,7 +34,7 @@
                         <div class="paddingMargin">
                             <b>Greek Getaway</b>
                         </div>
-                        <button id="btn1">
+                        <button id="btn1" onclick="switchThemeDefault()">
                             Choose
                         </button>
                     </div>
@@ -42,15 +42,15 @@
                         <div class="flex margin-right">
                             <div class="paddingMargin"> bg </div>
                             <div>
-                                <p class="circleColorBG1 paddingMargin circle"> </p>
+                                <p class="circleColorBG-1 paddingMargin circle"> </p>
                             </div>
                         </div>
                         <div class="textAndCirclesColor flex">
                             <div class="paddingMargin"> text </div>
                             <div class="circles flex">
-                                <p class="circleColor1 paddingMargin circle"> </p>
-                                <p class="circleColor2 paddingMargin circle"> </p>
-                                <p class="circleColor3 paddingMargin circle"> </p>
+                                <p class="circleColor-1-a paddingMargin circle"> </p>
+                                <p class="circleColor-1-b paddingMargin circle"> </p>
+                                <p class="circleColor-1-c paddingMargin circle"> </p>
                             </div>
                         </div>
                     </div>
@@ -60,9 +60,9 @@
                 <div>
                     <div class="themeName flex">
                         <div class="paddingMargin">
-                            <b>Animal crackers</b>
+                            <b>Piers & Pelicans </b>
                         </div>
-                        <button id="btn2">
+                        <button id="btn2" onclick="switchTheme1()">
                             Choose
                         </button>
                     </div>
@@ -70,15 +70,15 @@
                         <div class="flex margin-right">
                             <div class="paddingMargin"> bg </div>
                             <div>
-                                <p class="circleColorBG2 paddingMargin circle"> </p>
+                                <p class="circleColorBG-2 paddingMargin circle"> </p>
                             </div>
                         </div>
                         <div class="textAndCirclesColor flex">
                             <div class="paddingMargin"> text </div>
                             <div class="circles flex">
-                                <p class="circleColor4 paddingMargin circle"> </p>
-                                <p class="circleColor5 paddingMargin circle"> </p>
-                                <p class="circleColor6 paddingMargin circle"> </p>
+                                <p class="circleColor-2-a paddingMargin circle"> </p>
+                                <p class="circleColor-2-b paddingMargin circle"> </p>
+                                <p class="circleColor-2-c paddingMargin circle"> </p>
                             </div>
                         </div>
                     </div>
@@ -88,9 +88,9 @@
                 <div>
                     <div class="themeName flex">
                         <div class="paddingMargin">
-                            <b>Sweet dreams</b>
+                            <b>Rich Reds</b>
                         </div>
-                        <button id='btn3'>
+                        <button onclick='switchTheme2()'>
                             Choose
                         </button>
                     </div>
@@ -98,15 +98,127 @@
                         <div class="flex margin-right">
                             <div class="paddingMargin"> bg </div>
                             <div>
-                                <p class="circleColorBG3 paddingMargin circle"> </p>
+                                <p class="circleColorBG-3 paddingMargin circle"> </p>
                             </div>
                         </div>
                         <div class="textAndCirclesColor flex">
                             <div class="paddingMargin"> text </div>
                             <div class="circles flex">
-                                <p class="circleColor7 paddingMargin circle"> </p>
-                                <p class="circleColor8 paddingMargin circle"> </p>
-                                <p class="circleColor9 paddingMargin circle"> </p>
+                                <p class="circleColor-3-a paddingMargin circle"> </p>
+                                <p class="circleColor-3-b paddingMargin circle"> </p>
+                                <p class="circleColor-3-c paddingMargin circle"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="themeName flex">
+                        <div class="paddingMargin">
+                            <b>Decorative Florals</b>
+                        </div>
+                        <button id='btn4' onclick="switchTheme3()">
+                            Choose
+                        </button>
+                    </div>
+                    <div class="themeColors flex flex-wrap">
+                        <div class="flex margin-right">
+                            <div class="paddingMargin"> bg </div>
+                            <div>
+                                <p class="circleColorBG-4 paddingMargin circle"> </p>
+                            </div>
+                        </div>
+                        <div class="textAndCirclesColor flex">
+                            <div class="paddingMargin"> text </div>
+                            <div class="circles flex">
+                                <p class="circleColor-4-a paddingMargin circle"> </p>
+                                <p class="circleColor-4-b paddingMargin circle"> </p>
+                                <p class="circleColor-4-c paddingMargin circle"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="themeName flex">
+                        <div class="paddingMargin">
+                            <b>Juicy Fruits</b>
+                        </div>
+                        <button id='btn5' onclick="switchTheme4()">
+                            Choose
+                        </button>
+                    </div>
+                    <div class="themeColors flex flex-wrap">
+                        <div class="flex margin-right">
+                            <div class="paddingMargin"> bg </div>
+                            <div>
+                                <p class="circleColorBG-5 paddingMargin circle"> </p>
+                            </div>
+                        </div>
+                        <div class="textAndCirclesColor flex">
+                            <div class="paddingMargin"> text </div>
+                            <div class="circles flex">
+                                <p class="circleColor-5-a paddingMargin circle"> </p>
+                                <p class="circleColor-5-b paddingMargin circle"> </p>
+                                <p class="circleColor-5-c paddingMargin circle"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="themeName flex">
+                        <div class="paddingMargin">
+                            <b>Juicy Fruits</b>
+                        </div>
+                        <button id='btn5' onclick="switchTheme5()">
+                            Choose
+                        </button>
+                    </div>
+                    <div class="themeColors flex flex-wrap">
+                        <div class="flex margin-right">
+                            <div class="paddingMargin"> bg </div>
+                            <div>
+                                <p class="circleColorBG-6 paddingMargin circle"> </p>
+                            </div>
+                        </div>
+                        <div class="textAndCirclesColor flex">
+                            <div class="paddingMargin"> text </div>
+                            <div class="circles flex">
+                                <p class="circleColor-6-a paddingMargin circle"> </p>
+                                <p class="circleColor-6-b paddingMargin circle"> </p>
+                                <p class="circleColor-6-c paddingMargin circle"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="themeName flex">
+                        <div class="paddingMargin">
+                            <b>Juicy Fruits</b>
+                        </div>
+                        <button id='btn5' onclick="switchTheme6()">
+                            Choose
+                        </button>
+                    </div>
+                    <div class="themeColors flex flex-wrap">
+                        <div class="flex margin-right">
+                            <div class="paddingMargin"> bg </div>
+                            <div>
+                                <p class="circleColorBG-7 paddingMargin circle"> </p>
+                            </div>
+                        </div>
+                        <div class="textAndCirclesColor flex">
+                            <div class="paddingMargin"> text </div>
+                            <div class="circles flex">
+                                <p class="circleColor-7-a paddingMargin circle"> </p>
+                                <p class="circleColor-7-b paddingMargin circle"> </p>
+                                <p class="circleColor-7-c paddingMargin circle"> </p>
                             </div>
                         </div>
                     </div>
@@ -116,6 +228,7 @@
     </main>
 </body>
 <script src="script.js"> </script>
+<script src="type.js"> </script>
 </html>
 
 

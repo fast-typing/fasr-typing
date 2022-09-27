@@ -1,12 +1,12 @@
 :root {
     --txtMainColor: black;     /* Цвет основного текста */
-    --link1Color: #859f3c;     /* Цвет 1 ссылки */
-    --link2Color: #007f52;     /* Цвет 2 ссылки */
-    --link3Color: #45451f;     /* Цвет 3 ссылки */
+    --link1Color: #d69f3a;     /* Цвет 1 ссылки */
+    --link2Color: #c34f5a;     /* Цвет 2 ссылки */
+    --link3Color: #7f3535;     /* Цвет 3 ссылки */
 }
 
 body {
-    background-color: #ebe5d9;
+    background-color: #f8d4ba;
     color: var(--txtMainColor);
 }
 
@@ -15,57 +15,11 @@ form {
 }
 
 .nav-link {
-    color: black;
-}
-
-.link-1 {
-    background:
-     linear-gradient(
-       to bottom,
-       var(--link1Color) 0%,
-       var(--link1Color) 100%
-     );
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 4px 4px;
-    text-decoration: none;
-    
-}
-
-.link-2 {
-    background:
-     linear-gradient(
-       to bottom,
-       var(--link2Color) 0%,
-       var(--link2Color) 100%
-     );
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 4px 4px;
-    text-decoration: none;
-}
-
-.link-3 {
-    background:
-     linear-gradient(
-       to bottom,
-       var(--link3Color) 0%,
-       var(--link3Color) 100%
-     );
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 4px 4px;
-    text-decoration: none;
+    color: rgb(30, 30, 30);
 }
 
 .text {
     color: var(--txtMainColor);
-}
-
-.submit {
-    margin: auto 0px;
-    padding: 5px;
-    opacity: 0;
 }
 
 .dot1 {
@@ -81,21 +35,11 @@ form {
 }
 
 
-
-
 /* custom.html */
 
 
 ul {
     color: black;
-}
-
-ul li {
-    background-color: #DCDCDC;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
 }
 
 
