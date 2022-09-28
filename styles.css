@@ -231,7 +231,7 @@ button img {
     to { transform: translateY(100px);}
 }
 
-.moveTop {
+.moveTop , .textDefault {
     overflow: hidden;
     opacity: 0;
     animation: moveTop 1s ease forwards;
@@ -242,7 +242,10 @@ button img {
     from { transform: translateY(20px); opacity: 0;}
     to { transform: translateY(0px); opacity: 1;}
 }
-
+@keyframes textDefault{
+    from { transform: translateY(20px); opacity: 0;}
+    to { transform: translateY(0px); opacity: 1;}
+}
 
 
 

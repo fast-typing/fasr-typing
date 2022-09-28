@@ -23,11 +23,11 @@
         </nav>
     </div>
     <main>
-        <div class="text moveTop" id="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, nisi suscipit! Id culpa ab quos nulla nisi harum cumque. Commodi natus voluptates illo incidunt praesentium quisquam nesciunt optio quam fugiat.
+        <div class="text moveTop textDefault" id="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit . Praesentium , nisi suscipit ! Id culpa ab quos nulla nisi harum cumque . Commodi natus voluptates illo incidunt praesentium quisquam nesciunt optio quam fugiat .
         </div>
         <div class="flex filterAndTypePlace moveTop"> 
-            <button class="restart " style="--order: 1.5">
+            <button class="restart " style="--order: 1.5" onclick="poleRestart()">
                 <img src="/img/free-icon-undo-3889478.png">
             </button>
             <input type="text" id="poleVvode" onchange="poleVvode()" class=" typePlace inputColor2" placeholder="write there">
@@ -38,12 +38,12 @@
                 <label>
                     Time (sec):
                 </label>
-                <input type="number" min="10" max="300" placeholder="10-300" required="required" pattern="[0-9]{3}" class="inputColor1">
+                <input type="number" min="10" max="300" placeholder="10-300" required="required" pattern="[0-9]{3}" class="inputColor1" id="inputTime">
             </div>
             <div class="filter-language moveTop" style="--order: 1.5"> 
                 <label>Choose your language:
                 <input type="radio" name="browser" required="required"> English
-                <input type="radio" name="browser" required="required"> Russia
+                <input type="radio" name="browser" required="required" id = "rus" > Russia
                 </label>
             </div>
             <div class="filter-count-lists moveTop" style="--order: 2"> 
@@ -52,7 +52,7 @@
                 </label>
                 <input type="number" min="20" max="200" placeholder="20-200" class="inputColor3" required="required" pattern="[0-9]{3}">
             </div>
-            <input type="submit" class="inputSubmit moveTop" style="--order: 2" value="Allay" class="submitButton">
+            <input type="submit" class="inputSubmit moveTop" style="--order: 2" value="allay" onclick="filterShow()">
         </form>
     </main>
 </body>
