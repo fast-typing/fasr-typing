@@ -17,6 +17,7 @@ function poleVvode(inpt) {
   setTimeout(() => {
     var poleVvode = document.getElementById("poleVvode");
     poleVvode.setAttribute("disabled", "disabled");
+    poleVvode.setAttribute("placeholder", "time is over!");
     input.value = "";
   }, (inpt = 60000));
 }
