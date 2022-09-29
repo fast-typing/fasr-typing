@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="theme-1.css" id="theme">
-    <title>Document</title>
+    <title> FAST TYPING</title>
     <style>  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap'); </style>
     </head>
 <body>
@@ -23,36 +23,37 @@
         </nav>
     </div>
     <main>
-        <div class="text moveTop textDefault" id="text">
-            Никто точно не знает, откуда появился Pudge на Полях Вечной Бойни, которые находятся на юго-западе от города Квойдж. Ходили слухи, что Pudge это сын известной в городе семьи мясников и что он унаследовал от отца все знания мясницкого дела, но это всего лишь слухи, которыми полнится мир. История умалчивает, что же пошло не так.        </div>
+        <div class="text moveTop" id="text">
+            I think Pudge-Chen combo is really IMBALANCED! NaVi used this bug and won last game. First, this combo is not that hard for pro gamers. Second, this combo is different from the same one in war3 dota. Third, 2 normal skills shouldn't kill a hero with aegis easily. NICE BALANCE
+        </div>
         <div class="flex filterAndTypePlace moveTop"> 
-            <button class="restart " style="--order: 1.5" onclick="poleRestart()">
+            <button class="restart " style="--order: 1.5" onclick="restart()">
                 <img src="/img/free-icon-undo-3889478.png">
             </button>
-            <input type="text" id="poleVvode" onchange="poleVvode()" class=" typePlace inputColor2" placeholder="write there">
-            <input type="submit" class=" inputSubmit" value="filters" onclick="filterShowHide()">
+            <input type="text" id="poleVvode" onchange="poleVvode()" class="typePlace inputColor2" placeholder="write there">
+            <input type="submit" class="inputSubmit" value="filters" onclick="filterShowHide()">
         </div>
-        <form class="filters" id ='forms' >
-            <div class="filter-time moveTop" style="--order: 1.5"> 
+        <div class="filters" id ='forms' >
+            <div class="filter-time moveTop filtet" style="--order: 1.5"> 
                 <label>
                     Time (sec):
                 </label>
-                <input type="number" min="10" max="300" placeholder="10-300" required="required" pattern="[0-9]{3}" class="inputColor1" id="inputTime">
+                <input type="number" min="10" max="300" placeholder="10-300" class="inputColor1" id="time">
             </div>
-            <div class="filter-language moveTop" style="--order: 1.5"> 
+            <div class="filter-language moveTop filtet" style="--order: 1.5"> 
                 <label>Choose your language:
-                <input type="radio" name="browser" required="required"> English
-                <input type="radio" name="browser" required="required" id = "rus" > Russia
+                <input type="radio" name="browser" id="eng"> English
+                <input type="radio" name="browser" id="rus"> Russia
                 </label>
             </div>
-            <div class="filter-count-lists moveTop" style="--order: 2"> 
+            <div class="filter-count-lists moveTop filtet" style="--order: 2"> 
                 <label>
-                    Quantity of symbols:
+                    Quantity of words:
                 </label>
-                <input type="number" min="20" max="200" placeholder="20-200" class="inputColor3" required="required" pattern="[0-9]{3}">
+                <input type="number" min="20" max="50" placeholder="20-50" class="inputColor3" id="words">
             </div>
-            <input type="submit" class="inputSubmit moveTop" style="--order: 2" value="allay" onclick="filterShow()">
-        </form>
+            <input type="submit" class="inputSubmit moveTop" style="--order: 2" value="Allay" class="submitButton" onclick="filter()">
+        </div>
     </main>
 </body>
 <script src="script.js"> </script>
