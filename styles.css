@@ -63,11 +63,11 @@ i {
     width: 15px;
     height: 15px;
     padding: 2px;
-    border-radius: 100px;
+    border-radius: 6.5px;
     margin: 4px;
 }
 
-input {
+input{
     padding: 5px;
     border-style: none;
     font-size: 17.5px;
@@ -97,6 +97,21 @@ button img {
     justify-content: center;
 }
 
+.submitButton {
+    padding: 10px;
+    margin: auto 5px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 0.5px rgba(0, 0, 0, .3);
+    transition: 0.5s;
+}
+
+.submitButton:hover {
+    transform: scale(0.9);
+    box-shadow: 0 0 6px 2.5px rgba(0, 0, 0, .3);
+    
+}
 
 .filter {
     margin: auto 10px;
@@ -199,15 +214,13 @@ button img {
     font-size: 30px;
     margin-bottom: 10%;
     font-size: 50px;
+    
 }
 
-.inputSubmit {
-    margin: auto 10px;
-    padding: 7px;
-    border: 2px solid var(--txtMainColor);
-    border-radius: 10px;
-}
 
+.text::selection{
+    background: transparent;
+}
 .moveToRight {
     overflow: hidden;
     animation: moveToRight 1s ease forwards;
@@ -238,12 +251,30 @@ button img {
 }
 
 @keyframes moveTop {
-    from { transform: translateY(20px); opacity: 0;}
-    to { transform: translateY(0px); opacity: 1;}
+    0% { transform: translateY(40px); opacity: 0;}
+    100% { transform: translateY(20px); opacity: 1;}
 }
 
+.allay-animated-intro {
+    animation: moveTop 0.7s ease forwards;
+}
 
+.allay-animated-outro {
+    animation: moveDown 0.7s ease forwards;
+}
 
+@keyframes moveDown {
+    0% { transform: translateY(20px); opacity: 1;}
+    100% { transform: translateY(30px); opacity: 0;}
+}
+
+#p {
+    font-size: medium;
+    color: var(--txtMainColor);
+    position: relative;
+    margin-left: -68px;
+    margin-top: -22px;
+}
 
 /* custom.html */
 
