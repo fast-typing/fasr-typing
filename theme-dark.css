@@ -1,12 +1,12 @@
 :root {
-    --txtMainColor: rgb(201, 201, 201);     /* Цвет основного текста */
-    --link1Color: #126f80;     /* Цвет 1 ссылки */
-    --link2Color: #525e76;     /* Цвет 2 ссылки */
-    --link3Color: #f95151;     /* Цвет 3 ссылки */
+    --txtMainColor: rgb(221, 221, 221);     /* Цвет основного текста */
+    --link1Color: #d92139;     /* Цвет 1 ссылки */
+    --link2Color: #e99a24;     /* Цвет 2 ссылки */
+    --link3Color: #10a44a;     /* Цвет 3 ссылки */
 }
 
 body {
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(75, 75, 75);
     color: var(--txtMainColor);
 }
 
@@ -19,19 +19,20 @@ ul button {
 }
 
 ul li{
-    background-color: rgb(101, 101, 101);
+    background-color: rgb(37, 37, 37);
+    color: var(--txtMainColor);
 }
 
 .header {
-    background-color: rgb(121, 121, 121);
+    background-color: rgb(37, 37, 37);
 }
 
 input {
-    color: rgb(201, 201, 201);
+    color: var(--txtMainColor);
 }
 
 .nav-link {
-    color: rgb(201, 201, 201);
+    color: var(--txtMainColor);
 }
 
 

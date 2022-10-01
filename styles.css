@@ -63,8 +63,8 @@ i {
     width: 15px;
     height: 15px;
     padding: 2px;
-    border-radius: 6.5px;
-    margin: 4px;
+    border-radius: 15px;
+    margin: 4px 5px;
 }
 
 input{
@@ -93,24 +93,24 @@ button img {
     display: flex;
     font-weight: bold;
     flex-wrap: wrap;
-    transition: 1s;
+    transition: 0.5s;
     justify-content: center;
 }
 
 .submitButton {
-    padding: 10px;
+    padding: 10px 15px;
     margin: auto 5px;
-    height: 40px;
+    height: auto;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 0 3px 0.5px rgba(0, 0, 0, .3);
-    transition: 0.5s;
+    transition: 0.35s;
+    cursor: pointer;
 }
 
 .submitButton:hover {
-    transform: scale(0.9);
-    box-shadow: 0 0 6px 2.5px rgba(0, 0, 0, .3);
-    
+	box-shadow: 0 0 5px 3.5px rgba(0, 0, 0, .2);
+    transform: scale(0.92);
+
 }
 
 .filter {
@@ -217,10 +217,10 @@ button img {
     
 }
 
-
 .text::selection{
     background: transparent;
 }
+
 .moveToRight {
     overflow: hidden;
     animation: moveToRight 1s ease forwards;
@@ -255,26 +255,28 @@ button img {
     100% { transform: translateY(20px); opacity: 1;}
 }
 
-.allay-animated-intro {
-    animation: moveTop 0.7s ease forwards;
+.filters-animation-intro {
+    animation-name: slideTop;
+    animation-timing-function: linear;
+    animation-duration: 0.2s;
 }
 
-.allay-animated-outro {
-    animation: moveDown 0.7s ease forwards;
+.filters-animation-outro {
+    animation-name: slideDown;
+    animation-timing-function: linear;
+    animation-duration: 0.2s;
 }
 
-@keyframes moveDown {
-    0% { transform: translateY(20px); opacity: 1;}
-    100% { transform: translateY(30px); opacity: 0;}
+@keyframes slideTop {
+    0% { transform: translateY(-15px); opacity: 0;}
+    100% { transform: translateY(0px); opacity: 1;}
 }
 
-#p {
-    font-size: medium;
-    color: var(--txtMainColor);
-    position: relative;
-    margin-left: -68px;
-    margin-top: -22px;
+@keyframes slideDown {
+    0% { transform: translateY(0px); opacity: 1;}
+    100% { transform: translateY(-15px); opacity: 0;}
 }
+
 
 /* custom.html */
 
@@ -363,7 +365,7 @@ ul li {
 }
 
 .circleColor-1-a {
-    background-color: #12406a;
+    background-color: #6363b6;
 }
 
 .circleColor-1-b {
@@ -391,72 +393,20 @@ ul li {
     background-color: #7f3535;
 }
 
-
-.circleColorBG-2 {
-    background-color: #a299ca;
-}
-
-.circleColor-2-a {
-    background-color: #7ccaae;
-}
-
-.circleColor-2-b {
-    background-color: #ecec84;
-}
-
-.circleColor-2-c {
-    background-color: #ffb69b;
-}
-
-
-.circleColorBG-4 {
-    background-color: #e6b6c2;
-}
-
-.circleColor-4-a {
-    background-color: #d4587a;
-}
-
-.circleColor-4-b {
-    background-color: #778633;
-}
-
-.circleColor-4-c {
-    background-color: #dc364c;
-}
-
-
-.circleColorBG-5 {
-    background-color: #fff9e9;
-}
-
-.circleColor-5-a {
-    background-color: #5a8100;
-}
-
-.circleColor-5-b {
-    background-color: #ffb400;
-}
-
-.circleColor-5-c {
-    background-color: #ff6c02;
-}
-
-
 .circleColorBG-6 {
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(75, 75, 75);
 }
 
 .circleColor-6-a {
-    background-color: #126f80;
+    background-color: #d92139;
 }
 
 .circleColor-6-b {
-    background-color: #525e76;
+    background-color: #e99a24;
 }
 
 .circleColor-6-c {
-    background-color: #f95151;
+    background-color: #10a44a;
 }
 
 

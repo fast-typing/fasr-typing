@@ -73,19 +73,18 @@ function restart() {
     i = 0;
 }
 
-
-let allay = document.getElementById('allay')
-let p = document.getElementById('p')
-allay.addEventListener("click", function() {
-    p.classList.add('allay-animated-intro');
-    setTimeout(() => {
-        p.classList.add('allay-animated-outro');
-        }, 600);
-});
+// let allay = document.getElementById('allay')
+// let p = document.getElementById('p')
+// allay.addEventListener("click", function() {
+//     p.classList.add('allay-animated-intro');
+//     setTimeout(() => {
+//         p.classList.add('allay-animated-outro');
+//         }, 600);
+// });
   
-p.addEventListener("animationend", AnimationHandler, false);
+// p.addEventListener("animationend", AnimationHandler, false);
   
-function AnimationHandler () {
-    p.classList.remove('allay-animated-intro');
-    p.classList.remove('allay-animated-outro');
-}
+// function AnimationHandler () {
+//     p.classList.remove('allay-animated-intro');
+//     p.classList.remove('allay-animated-outro');
+// }

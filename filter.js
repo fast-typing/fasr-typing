@@ -1,7 +1,18 @@
+let forms = document.getElementById('forms');
+
 function filterShowHide() {
-    if (document.getElementById('forms').style.display == 'none'){
-        document.getElementById('forms').style.display = 'flex'
+    if (forms.style.opacity == '0'){
+        forms.classList.add('filters-animation-intro')
+        setTimeout(() => {
+            forms.classList.remove('filters-animation-intro')
+        }, 500);
+        
+        forms.style.opacity = '1'
     } else {
-        document.getElementById('forms').style.display = 'none'
+        forms.classList.add('filters-animation-outro')
+        setTimeout(() => {
+            forms.classList.remove('filters-animation-outro')
+        }, 500);
+        forms.style.opacity = '0'
     }
 }
