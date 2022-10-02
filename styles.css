@@ -89,7 +89,7 @@ input:focus {
 .submitButton {
     font-size: 15px;
     padding: 7.5px 10px;
-    margin: auto var(--margin);
+    margin: 2px var(--margin);
     border: none;
     border-radius: 10px;
     transition: 0.35s;
@@ -98,9 +98,8 @@ input:focus {
 
 .submitButton:hover {
 	background: #9fd289;
-        box-shadow: 0 5px 10px #76bf57;
-        color: white;
-        transform: translateY(-2.5px);
+    color: white;
+    transform: translateY(-2.5px);
 
 }
 
