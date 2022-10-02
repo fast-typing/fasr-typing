@@ -10,11 +10,7 @@ body {
     color: var(--txtMainColor);
 }
 
-form {
-    color: var(--txtMainColor);
-}
-
-.text {
+form, .text {
     color: var(--txtMainColor);
 }
 
@@ -29,12 +25,6 @@ form {
 .dot3 {
     background-color: var(--link3Color);
 }
-
-
-
-
-/* custom.html */
-
 
 ul {
     color: black;

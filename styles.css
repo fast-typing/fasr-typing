@@ -1,15 +1,10 @@
 :root {
-    --padding: 5px;
+    --padding: 10px;
     --margin: 10px;
     --txtMainColor: black;     /* Цвет основного текста */
     --link1Color: #12406a;     /* Цвет 1 ссылки */
     --link2Color: #eb8f90;     /* Цвет 2 ссылки */
     --link3Color: #ffb471;     /* Цвет 3 ссылки */
-}
-
-@font-face {
-    font-family: RobotoCondensed;
-    src: url(fonts/RobotoCondensed/RobotoCondensed-Regular.ttf);
 }
 
 ul button {
@@ -26,6 +21,10 @@ ul button {
     border: 0px;
 }
 
+body {
+    font-family: Nunito;
+}
+
 ul button:hover {
     background: #9fd289;
     box-shadow: 0 5px 20px #76bf57;
@@ -34,17 +33,13 @@ ul button:hover {
 }
 
 body {
-    font-family: Nunito;
-    font-weight: 200;
     font-size: 20px;
     margin: 0;
 }
 
 nav {
     width: 100%;
-    margin: 10px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 10px;
     display: flex;
     justify-content: flex-end;
     margin-top: -100px;
@@ -60,36 +55,28 @@ a {
 }
 
 i {
-    width: 15px;
-    height: 15px;
-    padding: 2px;
+    width: 18px;
+    height: 18px;
     border-radius: 15px;
-    margin: 4px 5px;
+    margin: 5px;
 }
 
-input{
-    padding: 5px;
+input {
+    padding: 2px 5px;
     border-style: none;
     font-size: 17.5px;
     background-color: rgb(0, 0, 0, 0);
     border-bottom: 2px solid #e0e0e0;
     outline: none;
     transition: .3s;
-    margin: 5px;
 }
 
 input:focus {
     border-color: black;
 }
 
-button img {
-    width: auto;
-    height: 25px;
-    transform: scale(-1, 1);
-}
-
 .filters {
-    font-size: 20px;
+    font-size: 17.5px;;
     display: flex;
     font-weight: bold;
     flex-wrap: wrap;
@@ -98,9 +85,9 @@ button img {
 }
 
 .submitButton {
-    padding: 10px 15px;
-    margin: auto 5px;
-    height: auto;
+    font-size: 15px;
+    padding: 7.5px 10px;
+    margin: auto var(--margin);
     border: none;
     border-radius: 10px;
     transition: 0.35s;
@@ -108,20 +95,35 @@ button img {
 }
 
 .submitButton:hover {
-	box-shadow: 0 0 5px 3.5px rgba(0, 0, 0, .2);
-    transform: scale(0.92);
+	background: #9fd289;
+        box-shadow: 0 5px 20px #76bf57;
+        color: white;
+        transform: translateY(-2.5px);
 
 }
 
 .filter {
-    margin: auto 10px;
-    padding: 10px;
+    font-weight: bold;
+    margin: auto var(--margin);
+    padding: var(--padding);
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .restart {
+    background-image: url(/img/undo-black.png); /* made by Rahul Kaklotar */
+    background-size: 25px;
+    background-repeat: no-repeat;
     background-color: rgb(0, 0, 0, 0);
-    border-color: rgb(0, 0, 0, 0);
+    width: 25px;
+    height: 25px;
+    margin: 5px var(--margin);
+    border: none;
     transition: .6s;
+    cursor: pointer;
 }
 
 .restart:hover {
@@ -133,22 +135,11 @@ button img {
     margin-bottom: 50px;
 }
 
-.inputColor1 {
-    border-color: var(--link1Color);
-}
-
-.inputColor2 {
-    border-color: var(--link2Color);
-}
-
-.inputColor3 {
-    border-color: var(--link3Color);
-}
 
 .header {
     position: sticky;
-    top: 0px;
-    padding: 15px;
+    top: 0;
+    padding: 13px;
     z-index: 1;
     background-color: #e7e6e6;
     box-shadow: 0 0 7.5px 2.5px rgba(0, 0, 0, .3);
@@ -156,17 +147,28 @@ button img {
 
 .img-dots {
     margin-left: -100px;
-
 }
 
+.dot-1 {
+    background-color: var(--link1Color);
+}
+
+.dot-2 {
+    background-color: var(--link2Color);
+}
+
+.dot-3 {
+    background-color: var(--link3Color);
+}
+
+
 .nav-link {
-    margin: 0px 20px;
+    margin: auto 20px;
     padding: 0px 5px;
     transition: background-size .4s;
     color: black;
     font-weight: bold;
 }
-
 
 .nav-link:hover { 
     background-size: 2px 50px;
@@ -208,18 +210,21 @@ button img {
     background-size: 4px 3px;
 }
 
+
 .text {
     height: 100%;
     text-indent: 40px;
-    font-size: 30px;
     margin-bottom: 10%;
-    font-size: 50px;
-    
+    font-size: 55px;
+    font-weight: 200;
 }
 
 .text::selection{
     background: transparent;
 }
+
+
+/* animations */
 
 .moveToRight {
     overflow: hidden;
@@ -282,7 +287,7 @@ button img {
 
 h1 {
     font-size: 70px;
-    font-weight: bolder;
+    font-weight: 500;
     margin: 0px;
 }
 
@@ -301,30 +306,6 @@ ul li {
     margin-bottom: 50px;
     background-color: #DCDCDC;
 }
-
-.search {
-    padding: 20px;
-    height: 20px;
-    align-content: center;
-    margin: 80px 0px;
-}
-
-.search::before {
-    background-image: url(img/dot.png);
-}
-
-.dot1 {
-    transition: 0.5s;
-}
-
-.dot2 {
-    transition: 0.5s;
-}
-
-.dot3 {
-    transition: 0.5s;
-}
-
 
 .flex-wrap {
     flex-wrap: wrap;
@@ -345,84 +326,19 @@ ul li {
     display: flex;
 }
 
-.themeColors {
-    align-items: center;
-}
-
-.textAndCirclesColor {
-    align-items: center;
-}
-
 .paddingMargin {
     padding: var(--padding);
     margin: var(--margin);
 }
 
-
-
-.circleColorBG-1 {
-    background-color: #adbed2;
+.inputColor1 {
+    border-color: var(--link1Color);
 }
 
-.circleColor-1-a {
-    background-color: #6363b6;
+.inputColor2 {
+    border-color: var(--link2Color);
 }
 
-.circleColor-1-b {
-    background-color: #eb8f90;
+.inputColor3 {
+    border-color: var(--link3Color);
 }
-
-.circleColor-1-c {
-    background-color: #ffb471;
-}
-
-
-.circleColorBG-3 {
-    background-color: #f8d4ba;
-}
-
-.circleColor-3-a {
-    background-color: #d69f3a;
-}
-
-.circleColor-3-b {
-    background-color: #c34f5a;
-}
-
-.circleColor-3-c {
-    background-color: #7f3535;
-}
-
-.circleColorBG-6 {
-    background-color: rgb(75, 75, 75);
-}
-
-.circleColor-6-a {
-    background-color: #d92139;
-}
-
-.circleColor-6-b {
-    background-color: #e99a24;
-}
-
-.circleColor-6-c {
-    background-color: #10a44a;
-}
-
-
-.circleColorBG-7 {
-    background-color: #1f1f29;
-}
-
-.circleColor-7-a {
-    background-color: #fec6ad;
-}
-
-.circleColor-7-b {
-    background-color: #a2b75c;
-}
-
-.circleColor-7-c {
-    background-color: #fe6323;
-}
-

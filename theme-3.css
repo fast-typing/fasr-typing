@@ -1,0 +1,54 @@
+:root {
+    --txtMainColor: rgb(221, 221, 221);     /* Цвет основного текста */
+    --link1Color: #d92139;     /* Цвет 1 ссылки */
+    --link2Color: #e99a24;     /* Цвет 2 ссылки */
+    --link3Color: #10a44a;     /* Цвет 3 ссылки */
+}
+
+body {
+    background-color: rgb(75, 75, 75);
+    color: var(--txtMainColor);
+}
+
+form, input, .nav-link, .text  {
+    color: var(--txtMainColor);
+}
+
+ul button {
+    background-color: rgb(201, 201, 201);
+}
+
+ul li{
+    background-color: rgb(37, 37, 37);
+    color: var(--txtMainColor);
+}
+
+.header {
+    background-color: rgb(37, 37, 37);
+}
+
+.restart {
+    background-image: url(/img/undo-white.png) /* made by Rahul Kaklotar */
+}
+
+.dot1 {
+    background-color: var(--link1Color);
+}
+
+.dot2 {
+    background-color: var(--link2Color);
+}
+
+.dot3 {
+    background-color: var(--link3Color);
+}
+
+ul {
+    color: black;
+}
+
+
+
+
+
+
