@@ -13,6 +13,7 @@ var i = 0;
 let quanSymb = 0;
 var wpm;
 
+
 function randomArr(array) {
     array.sort(() => Math.random() - 0.5);
 
