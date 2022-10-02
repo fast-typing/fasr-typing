@@ -24,7 +24,7 @@ function randomArr(array) {
 randomArr(engText);
 
 
-function filter() {
+function filter( ) {
     inputTime = document.getElementById('time').value;
     inputWords = document.getElementById('words').value;
     NowArr = [];
@@ -38,15 +38,15 @@ function filter() {
     }
 
     if (inputWords > 50) {
-        inputWords = 50
+        inputWords = 50;
     } else if (inputWords < 20) {
-        inputWords = 20
+        inputWords = 20;
     }
 
     if (inputTime > 180) {
-        inputTime = 180
+        inputTime = 180;
     } else if (inputTime < 30) {
-        inputTime = 30
+        inputTime = 30;
     }
 
     if (document.getElementById('rus').checked == true) {

@@ -1,3 +1,4 @@
+
 function switchTheme1() {
     let theme = document.getElementById('theme')
     theme.href = 'theme-1.css'
