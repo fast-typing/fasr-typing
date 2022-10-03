@@ -7,7 +7,7 @@ var rusText = ['пудж', 'ручка', 'модный', 'современный
 var oldWords = [];
 let NowArr = [];
 let arrWords = [];
-var inputTime = 30;
+var inputTime = 10;
 var inputWords = 30;
 var i = 0;
 let quanSymb = 0;
@@ -95,7 +95,7 @@ function currentTime() {
         }
         if (currTime == 0) {
             clearInterval(b);
-            divTime.style.color = 'var(--txtMainColor)'
+            divTime.style.color = 'black'
             divTime.innerText = '--';
         }
     }, 1000);
@@ -103,6 +103,7 @@ function currentTime() {
 }
 
 function timer() {
+    quanSymb = 0;
     setTimeout(() => {
         var poleVvode = document.getElementById('poleVvode');
         poleVvode.value = '';
