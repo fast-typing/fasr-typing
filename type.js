@@ -90,12 +90,8 @@ function currentTime() {
     let b = setInterval(() => {
         currTime -= 1
         divTime.innerText = currTime;
-        if (currTime <= 5) {
-            divTime.style.color = 'red';
-        }
-        if (currTime == 0) {
+        if (currTime <= 0) {
             clearInterval(b);
-            divTime.style.color = 'black'
             divTime.innerText = '--';
         }
     }, 1000);
