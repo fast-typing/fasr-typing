@@ -1,6 +1,6 @@
 :root {
-    --padding: 10px;
-    --margin: 10px;
+    --padding: 8px;
+    --margin: 8px;
     --txtMainColor: black;     /* Цвет основного текста */
     --link1Color: #12406a;     /* Цвет 1 ссылки */
     --link2Color: #eb8f90;     /* Цвет 2 ссылки */
@@ -60,6 +60,7 @@ i {
 }
 
 input {
+    font-family: Nunito;
     padding: 2px 5px;
     border-style: none;
     font-size: 17.5px;
@@ -75,7 +76,6 @@ input:focus {
 
 .filters {
     font-size: 20px;
-    font-weight: bold;
     flex-wrap: wrap;
     transition: 0.5s;
     justify-content: center;
@@ -83,26 +83,28 @@ input:focus {
 }
 
 .submitButton {
-    font-size: 15px;
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 17.5px;
     padding: 7.5px 10px;
-    margin: 2px var(--margin);
+    margin: auto;
     border: none;
     border-radius: 10px;
     transition: 0.35s;
     cursor: pointer;
-    box-shadow: 0 0 7.5px 2.5px rgba(0, 0, 0, .3);
+    box-shadow: rgba(0, 0, 0, .3);
+    background-color: white;
+    color: var(--txtMainColor);
 }
 
 .submitButton:hover {
 	background: #9fd289;
     box-shadow: 0 0 8px 1px #76bf57;
     color: white;
-    transform: translateY(-1.5px);
-
+    transform: translateY(-2px);
 }
 
 .filter {
-    font-weight: bold;
     margin: auto var(--margin);
     padding: var(--padding);
 }
@@ -119,7 +121,7 @@ input::-webkit-inner-spin-button {
     background-color: rgb(0, 0, 0, 0);
     width: 25px;
     height: 25px;
-    margin: 5px var(--margin);
+    margin: auto;
     border: none;
     transition: .6s;
     cursor: pointer;
@@ -140,6 +142,7 @@ input::-webkit-inner-spin-button {
 }
 
 .filterAndTypePlace {
+    font-size: 20px;
     position: fixed;
     justify-content: center;
     bottom: 20px;
@@ -147,11 +150,16 @@ input::-webkit-inner-spin-button {
     background-color: #e7e6e6;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 7.5px 2.5px rgba(0, 0, 0, .3);
-    padding: calc(var(--padding)*2);
-    width: 350px;
+    padding: calc(var(--padding)*3);
+    width: 390px;
     margin:auto;
     left:0;
     right:0;
+}
+
+.curTime {
+    margin: auto;
+    font-weight: bold;
 }
 
 .img-dots {
@@ -230,6 +238,8 @@ input::-webkit-inner-spin-button {
 .text::selection{
     background: transparent;
 }
+
+
 
 
 /* animations */
@@ -324,7 +334,8 @@ ul li {
     width: 25px;
     height: 25px;
     border-radius: 100px;
-    margin: auto 0px;
+    margin: auto 10px;
+    padding: 10px;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, .3);
 }
 
@@ -347,6 +358,7 @@ ul li {
 
 .inputColor2 {
     border-color: var(--link2Color);
+    margin: auto;
 }
 
 .inputColor3 {

@@ -46,3 +46,10 @@ ul li{
 ul {
     color: black;
 }
+
+.submitButton:hover {
+	background: #9fd289;
+    box-shadow: 0 0 8px 1px #76bf57;
+    color: black;
+    transform: translateY(-2px);
+}

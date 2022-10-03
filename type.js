@@ -65,6 +65,11 @@ function filter( ) {
 
 
 function poleVvode() {
+    if (i == 0){
+        timer();
+        currentTime();
+    }
+
     if (NowArr[i] == input.value) {
         input.value = '';
         let word = document.createElement('span');
@@ -75,11 +80,26 @@ function poleVvode() {
         delete NowArr[i];
         document.getElementById("text").innerHTML = oldWords.join(' ') + NowArr.join(" ");
         i++;
-    } 
+    }   
+}
 
-    if (i == 1){
-        timer();
-    }
+function currentTime() {
+    let divTime = document.getElementById('curTime');
+    let currTime = inputTime;
+    divTime.innerText = currTime;
+    let b = setInterval(() => {
+        currTime -= 1
+        divTime.innerText = currTime;
+        if (currTime <= 5) {
+            divTime.style.color = 'red';
+        }
+        if (currTime == 0) {
+            clearInterval(b);
+            divTime.style.color = 'var(--txtMainColor)'
+            divTime.innerText = '--';
+        }
+    }, 1000);
+
 }
 
 function timer() {
@@ -98,8 +118,8 @@ function timer() {
 
         quanSymb = Math.round(quanSymb/(inputTime/60))
 
-        alert(`Words per minute ${wpm}`);
-        alert(`Characters per minute ${quanSymb}`);
+        console.log(`Words per minute ${wpm}`);
+        console.log(`Characters per minute ${quanSymb}`);
 
     }, inputTime*1000);
 }
