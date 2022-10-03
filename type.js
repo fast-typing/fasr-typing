@@ -89,7 +89,7 @@ function timer() {
         poleVvode.setAttribute('disabled', 'disabled');
         poleVvode.setAttribute('placeholder', 'time is over!');
         wpm = Math.round(i/(inputTime/60));
-        
+        quanSymb = 0
         
         for (c = 0; c < i; c++) {
             let word = arrWords[c];
