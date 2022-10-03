@@ -8,7 +8,7 @@ var rusText = ['пудж', 'ручка', 'модный', 'современный
 var oldWords = [];
 let NowArr = [];
 let arrWords = [];
-var inputTime = 1;
+var inputTime =30;
 var inputWords = 20;
 var i = 0;
 let quanSymb = 0;
@@ -124,15 +124,14 @@ function timer() {
 
         
         result.style.opacity = 1;
-        result.style.zIndex = 3;
-        result.innerHTML = result.innerHTML + `<img src="/img/сlose.png" alt="close" class="close" onclick="hide()"> 
+        result.innerHTML = result.innerHTML + `<img src="/img/сlose.png" alt="close" class="close id='close"> 
         <img src="/img/runer-silhouette-running-fast.png" alt="your-speed" class="speed"><div class='brawly'>Words per minute: ${wpm} <br> Characters per minute: ${quanSymb}</div> `
     }, inputTime*1000);
+
 }
 
-function hide() {
+document.getElementById('result').onclick = function hide() {
     result.style.opacity = 0;
-    result.style.zIndex = 0;
     result.innerHTML = clearResult;
 }
 

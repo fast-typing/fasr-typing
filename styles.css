@@ -201,7 +201,7 @@ input::-webkit-inner-spin-button {
     float: right;
     width: 25px;
     margin-left: 15px;
-    cursor: pointer;;
+    cursor: pointer;
 }
 
 .speed {
@@ -210,7 +210,6 @@ input::-webkit-inner-spin-button {
     margin: auto;
     height: 160px;
     padding: 20px;
-    
 }
 
 .brawly {
