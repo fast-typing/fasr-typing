@@ -8,11 +8,12 @@ var oldWords = [];
 let NowArr = [];
 let arrWords = [];
 var inputTime = 30;
-var inputWords = 30;
+var inputWords = 20;
 var i = 0;
 let quanSymb = 0;
+let currTime = inputTime;
 var wpm;
-
+let timerFunc;
 
 function randomArr(array) {
     array.sort(() => Math.random() - 0.5);
@@ -31,6 +32,8 @@ function filter( ) {
     inputTime = document.getElementById('time').value;
     inputWords = document.getElementById('words').value;
     NowArr = [];
+    currTime = 0;
+    clearTimeout(timerFunc)
 
     if (inputWords == '') {
         inputWords = 30; 
@@ -85,13 +88,14 @@ function poleVvode() {
 
 function currentTime() {
     let divTime = document.getElementById('curTime');
-    let currTime = inputTime;
+    currTime = inputTime
     divTime.innerText = currTime;
     let b = setInterval(() => {
         currTime -= 1
         divTime.innerText = currTime;
         if (currTime <= 0) {
             clearInterval(b);
+            divTime.style.color = 'var(--txtMainColor)'
             divTime.innerText = '--';
         }
     }, 1000);
@@ -100,7 +104,7 @@ function currentTime() {
 
 function timer() {
     quanSymb = 0;
-    setTimeout(() => {
+    timerFunc = setTimeout(() => {
         var poleVvode = document.getElementById('poleVvode');
         poleVvode.value = '';
         poleVvode.setAttribute('disabled', 'disabled');
@@ -111,6 +115,7 @@ function timer() {
         for (c = 0; c < i; c++) {
             word = arrWords[c];
             quanSymb += word.length;
+            console.log(quanSymb)
         }
 
         quanSymb = Math.round(quanSymb/(inputTime/60))
@@ -130,6 +135,8 @@ function restart() {
         randomArr(engText)
     }
 
+    clearTimeout(timerFunc)
+    currTime = 0; 
     var poleVvode = document.getElementById('poleVvode');
     poleVvode.setAttribute('placeholder', 'write there');
     poleVvode.removeAttribute('disabled');
