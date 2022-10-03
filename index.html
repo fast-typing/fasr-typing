@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="theme-1.css" id="theme">
     <title> FAST TYPING</title>
-    <style>  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap'); </style>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap'); </style>
     </head>
 <body>
     <div class="header flex">
@@ -17,22 +17,16 @@
             <i class="moveToRight dot-3" style="--order: 1"></i>
         </a>
         <nav>
-            <a href='#' class="nav-link link-1 dropDown" style="--order: 3">leaderbaord</a>
-            <a href='custom.html' class="nav-link link-2 dropDown" style="--order: 3.5">customization</a>
-            <a href='#' class="nav-link link-3 dropDown" style="--order: 4">account</a>
+            <a href='index.html' class="nav-link link-1 dropDown" style="--order: 3.5">home</a>
+            <a href='colors.html' class="nav-link link-2 dropDown" style="--order: 3.5">themes</a>
+            <a href='#' class="nav-link link-3 dropDown" style="--order: 3.5">contacts</a>
         </nav>
     </div>
     <main id="main">
         <div class="text moveTop" id="text">
         <!-- I think Pudge-Chen combo is really IMBALANCED! NaVi used this bug and won last game. First, this combo is not that hard for pro gamers. Second, this combo is different from the same one in war3 dota. Third, 2 normal skills shouldn't kill a hero with aegis easily. NICE BALANCE -->
         </div>
-        <div class="flex filterAndTypePlace moveTop"> 
-            <button class="restart " style="--order: 1.5" onclick="restart()">
-            </button>
-            <input class="inputColor2" id="poleVvode" onchange="poleVvode()" type="text" placeholder="write there">
-            <button class="submitButton" id="filter" onclick="filterShowHide()"> filters </button>
-        </div>
-        <div class="filters" id ='forms'>
+        <div class="filters flex" id ='forms'>
             <div class="filter-time moveTop filter" style="--order: 1.5"> 
                 <label>
                     Time (sec):
@@ -53,8 +47,14 @@
                 <button class="submitButton " onclick="filter()" id="allay"> allay </button>
             </div>
             <!-- <p style="opacity: 0;" id="p">done!</p> -->
-        </div>
+        </div> 
     </main>
+    <div class="flex filterAndTypePlace moveTop"> 
+        <button class="restart " style="--order: 1.5" onclick="restart()">
+        </button>
+        <input class="inputColor2" id="poleVvode" onchange="poleVvode()" type="text" placeholder="write there">
+        <button class="submitButton" id="filter" onclick="filterShowHide()"> filters </button>
+    </div>
 </body>
 <script src="script.js"> </script>
 <script src="type.js"> </script>

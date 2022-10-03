@@ -2,7 +2,7 @@ document.getElementById('poleVvode').setAttribute('autocomplete', 'off');
 var text = document.getElementById('text');
 var input = document.getElementById('poleVvode');
 var textDefault = document.getElementById("text").innerText;
-var engText = ['pudge', 'function', 'document', 'element', 'bookmark', 'attribute', 'condition', 'accessing', 'temperature', 'notebook', 'birthday','imbalanced','cool','Obama','crash','computer','text','firewall','hardware','development','netiquette','equipment','install','search','update','stack','application','development','debug','delete','disconnect','enable','reboot','verify','compile','database','eject','folder','layout','namespace','outsource','password','upload','interface','backup','class','variable','property','response','current'];
+var engText = ['pudge', 'function', 'document', 'element', 'bookmark', 'attribute', 'condition', 'accessing', 'temperature', 'notebook', 'birthday','imbalanced','cool','Obama','crash','computer','text','firewall','hardware','development','netiquette','equipment','install','search','update','stack','application','cat','debug','delete','disconnect','enable','reboot','verify','compile','database','eject','folder','layout','namespace','outsource','password','upload','interface','backup','class','variable','property','response','current'];
 var rusText = ['пудж', 'ручка', 'модный', 'современный', 'пранк', 'цикада', 'кошка', 'узбекистак', 'таджик', 'микрофон', 'линейка', 'ластик', 'наушники', 'процессор', 'стол', 'полка', 'маркер', 'кубик', 'арбуз', 'черешня', 'фантик', 'лимонад', 'вирус', 'юбилей', 'работа', 'терпение', 'сковорода', 'хобот', 'утро', 'скакалка', 'цитрус', 'мигрень', 'йогурт', 'эскимо', 'жаргон', 'зарождение', 'пирог', 'ведро', 'лебедь', 'табуретка', 'тетрадка', 'тетрадка', 'чаепитие', 'работа', 'яблоко', 'шоколад', 'антиутопия', 'месяц', 'щегол', 'обводка'];
 var oldWords = [];
 let NowArr = [];
@@ -67,7 +67,7 @@ function filter( ) {
 function poleVvode() {
     if (NowArr[i] == input.value) {
         input.value = '';
-        var word = document.createElement('span');
+        let word = document.createElement('span');
         word.style.opacity = '0.3'
         word.innerHTML = NowArr[i];
         oldWords.push(word.outerHTML);
@@ -89,10 +89,10 @@ function timer() {
         poleVvode.setAttribute('disabled', 'disabled');
         poleVvode.setAttribute('placeholder', 'time is over!');
         wpm = Math.round(i/(inputTime/60));
-        quanSymb = 0
-        
+        let word
+
         for (c = 0; c < i; c++) {
-            let word = arrWords[c];
+            word = arrWords[c];
             quanSymb += word.length;
         }
 
