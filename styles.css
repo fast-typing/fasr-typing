@@ -180,6 +180,7 @@ input::-webkit-inner-spin-button {
 
 
 .nav-link {
+    font-size: auto;
     margin: auto 20px;
     padding: 0px 5px;
     transition: background-size .4s;
@@ -238,9 +239,6 @@ input::-webkit-inner-spin-button {
 .text::selection{
     background: transparent;
 }
-
-
-
 
 /* animations */
 
@@ -354,6 +352,7 @@ ul li {
 
 .inputColor1 {
     border-color: var(--link1Color);
+    width: 65px;
 }
 
 .inputColor2 {
@@ -363,4 +362,99 @@ ul li {
 
 .inputColor3 {
     border-color: var(--link3Color);
+    width: 50px;
+}
+
+
+/* mobile version */
+
+@media screen and (max-width: 900px){
+    .filterAndTypePlace {
+        font-size: 30px;
+        border-radius: 0px 0px 0 0;
+        padding: calc(var(--padding)*2);
+        width: 100%;
+    }
+
+    .text {
+        margin-bottom: 50px;
+        font-size: 55px;
+    }
+    
+    main{
+        margin: 100px 50px 0px;
+    }
+
+    nav {
+        margin: auto 0px;
+        margin-top: -100px;
+    }
+
+    i {
+        width: 20px;
+        height: 20px;
+        border-radius:5px;
+        margin: 5px;
+    }
+    
+    input {
+        padding: 5px 10px;
+        font-size: 20px;
+        background-color: rgb(0, 0, 0, 0);
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    .filters {
+        font-size: 25px;
+        flex-wrap: wrap;
+        transition: 0.5s;
+        justify-content: center;
+        margin-bottom: 120px;
+    }
+    
+    .submitButton {
+        font-size: 20px;
+        margin: auto 20px;
+    }
+    
+    .restart {
+        background-image: url(/img/undo-black.png); /* made by Rahul Kaklotar */
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-color: rgb(0, 0, 0, 0);
+        width: 30px;
+        height: 30px;
+        margin: auto 20px;
+        border: none;
+        transition: .6s;
+        cursor: pointer;
+    }
+
+    .inputColor2 {
+        border-color: var(--link2Color);
+        margin: auto 20px;
+    }
+
+    .inputColor1 {
+        border-color: var(--link1Color);
+        width: 70px;
+    }
+
+    .inputColor3 {
+        border-color: var(--link3Color);
+        width: 60px;
+    }
+
+    .curTime {
+        margin: auto 20px;
+    }
+
+    .nav-link {
+        font-size: 25px;
+    }
+
+    .circle {
+        width: 35px;
+        height: 35px;
+    }
 }
