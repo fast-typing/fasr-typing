@@ -7,26 +7,6 @@
     --link3Color: #ffb471;     /* Цвет 3 ссылки */
 }
 
-ul button {
-    background-color: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
-    color: black;
-    font-family: Nunito;
-    font-size: 18px;
-    font-weight: bold;
-    margin: auto 0px;
-    padding: 10px 15px;
-    border-radius: 15px;
-    border: 0px;
-    transition: .3s;
-}
-
-ul button:hover {
-    background: #9fd289;
-    box-shadow: 0 0 8px 1px #76bf57;
-    color: white;
-    transform: translateY(-2.5px);
-}
 
 body {
     font-family: Nunito;
@@ -72,6 +52,28 @@ input {
 
 input:focus {
     border-color: black;
+}
+
+
+ul button {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    color: black;
+    font-family: Nunito;
+    font-size: 18px;
+    font-weight: bold;
+    margin: auto 0px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 0px;
+    transition: .3s;
+}
+
+ul button:hover {
+    background: #9fd289;
+    box-shadow: 0 0 8px 1px #76bf57;
+    color: white;
+    transform: translateY(-2.5px);
 }
 
 .filters {
@@ -150,7 +152,7 @@ input::-webkit-inner-spin-button {
     background-color: #e7e6e6;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 7.5px 2.5px rgba(0, 0, 0, .3);
-    padding: calc(var(--padding)*3);
+    padding: calc(var(--padding)*2);
     width: 390px;
     margin:auto;
     left:0;
@@ -176,6 +178,45 @@ input::-webkit-inner-spin-button {
 
 .dot-3 {
     background-color: var(--link3Color);
+}
+
+.result{
+    position: absolute;
+    background-color: #e7e6e6;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0 0 20px 2000px rgba(0, 0, 0, .3);
+    opacity: 0;
+    z-index: 3;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    width: 25px;
+    margin-left: 15px;
+    cursor: pointer;;
+}
+
+.speed {
+    float: left;
+    margin: 20px;
+    margin: auto;
+    height: 160px;
+    padding: 20px;
+    
+}
+
+.brawly {
+    margin: auto 0px;
+    height: 200px;
+    margin-top: 12.5%;
 }
 
 

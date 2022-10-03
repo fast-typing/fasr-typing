@@ -2,16 +2,18 @@ document.getElementById('poleVvode').setAttribute('autocomplete', 'off');
 var text = document.getElementById('text');
 var input = document.getElementById('poleVvode');
 var textDefault = document.getElementById("text").innerText;
+let result = document.getElementById('result')
 var engText = ['pudge', 'function', 'document', 'element', 'bookmark', 'attribute', 'condition', 'accessing', 'temperature', 'notebook', 'birthday','imbalanced','cool','Obama','crash','computer','text','firewall','hardware','development','netiquette','equipment','install','search','update','stack','application','cat','debug','delete','disconnect','enable','reboot','verify','compile','database','eject','folder','layout','namespace','outsource','password','upload','interface','backup','class','variable','property','response','current'];
 var rusText = ['пудж', 'ручка', 'модный', 'современный', 'пранк', 'цикада', 'кошка', 'узбекистак', 'таджик', 'микрофон', 'линейка', 'ластик', 'наушники', 'процессор', 'стол', 'полка', 'маркер', 'кубик', 'арбуз', 'черешня', 'фантик', 'лимонад', 'вирус', 'юбилей', 'работа', 'терпение', 'сковорода', 'хобот', 'утро', 'скакалка', 'цитрус', 'мигрень', 'йогурт', 'эскимо', 'жаргон', 'зарождение', 'пирог', 'ведро', 'лебедь', 'табуретка', 'тетрадка', 'тетрадка', 'чаепитие', 'работа', 'яблоко', 'шоколад', 'антиутопия', 'месяц', 'щегол', 'обводка'];
 var oldWords = [];
 let NowArr = [];
 let arrWords = [];
-var inputTime = 30;
+var inputTime = 1;
 var inputWords = 20;
 var i = 0;
 let quanSymb = 0;
 let currTime = inputTime;
+let clearResult = result.outerHTML;
 var wpm;
 let timerFunc;
 
@@ -120,10 +122,18 @@ function timer() {
 
         quanSymb = Math.round(quanSymb/(inputTime/60))
 
-        console.log(`Words per minute ${wpm}`);
-        console.log(`Characters per minute ${quanSymb}`);
-
+        
+        result.style.opacity = 1;
+        result.style.zIndex = 3;
+        result.innerHTML = result.innerHTML + `<img src="/img/сlose.png" alt="close" class="close" onclick="hide()"> 
+        <img src="/img/runer-silhouette-running-fast.png" alt="your-speed" class="speed"><div class='brawly'>Words per minute: ${wpm} <br> Characters per minute: ${quanSymb}</div> `
     }, inputTime*1000);
+}
+
+function hide() {
+    result.style.opacity = 0;
+    result.style.zIndex = 0;
+    result.innerHTML = clearResult;
 }
 
 function restart() {
