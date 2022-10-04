@@ -2,13 +2,15 @@ document.getElementById('poleVvode').setAttribute('autocomplete', 'off');
 var text = document.getElementById('text');
 var input = document.getElementById('poleVvode');
 var textDefault = document.getElementById("text").innerText;
-let result = document.getElementById('result')
+let result = document.getElementById('result');
+let wpmDiv = document.getElementById('WPM')
+let cpmDiv = document.getElementById('CPM')
 var engText = ['pudge', 'function', 'document', 'element', 'bookmark', 'attribute', 'condition', 'accessing', 'temperature', 'notebook', 'birthday','imbalanced','cool','Obama','crash','computer','text','firewall','hardware','development','netiquette','equipment','install','search','update','stack','application','cat','debug','delete','disconnect','enable','reboot','verify','compile','database','eject','folder','layout','namespace','outsource','password','upload','interface','backup','class','variable','property','response','current', 'is', 'square', 'enjoy', 'young', 'go', 'type', 'panda', 'end', 'dog', 'get', 'axe', 'tea', 'tree', 'house', 'work', 'walk', 'hi', 'cow', 'brick', 'grass', 'missed', 'popular', 'empty', 'fingsrs', 'neutral', 'vitamine', 'difficult'  ]
 var rusText = ['пудж', 'ручка', 'модный', 'современный', 'пранк', 'цикада', 'кошка', 'узбекистак', 'таджик', 'микрофон', 'линейка', 'ластик', 'наушники', 'процессор', 'стол', 'полка', 'маркер', 'кубик', 'арбуз', 'черешня', 'фантик', 'лимонад', 'вирус', 'юбилей', 'работа', 'терпение', 'сковорода', 'хобот', 'утро', 'скакалка', 'цитрус', 'мигрень', 'йогурт', 'эскимо', 'жаргон', 'зарождение', 'пирог', 'ведро', 'лебедь', 'табуретка', 'тетрадка', 'тетрадка', 'чаепитие', 'работа', 'яблоко', 'шоколад', 'антиутопия', 'месяц', 'щегол', 'обводка'];
 var oldWords = [];
 let NowArr = [];
 let arrWords = [];
-var inputTime = 60;
+var inputTime = 10;
 var inputWords = 40;
 var i = 0;
 let quanSymb = 0;
@@ -36,7 +38,9 @@ function filter( ) {
     inputWords = document.getElementById('words').value;
     NowArr = [];
     currTime = 0;
-    clearTimeout(timerFunc)
+    clearTimeout(timerFunc);
+    wpmDiv.innerText = 'wpm: -';
+    cpmDiv.innerText = 'cpm: -';
 
     if (inputWords == '') {
         inputWords = 30; 
@@ -91,8 +95,6 @@ function poleVvode() {
 
 function currentTime() {
     let divTime = document.getElementById('curTime');
-    let wpmDiv = document.getElementById('WPM')
-    let cpmDiv = document.getElementById('CPM')
 
     currTime = inputTime;
     divTime.innerText = currTime;
@@ -115,8 +117,7 @@ function currentTime() {
 function timer() {
     quanSymb = 0;
     timerFunc = setTimeout(() => {
-        let wpmDiv = document.getElementById('WPM')
-        let cpmDiv = document.getElementById('CPM')
+        
         var poleVvode = document.getElementById('poleVvode');
         poleVvode.value = '';
         poleVvode.setAttribute('disabled', 'disabled');
@@ -134,10 +135,7 @@ function timer() {
         quanSymb = Math.round(quanSymb/(inputTime/60))
 
         wpmDiv.innerText = 'wpm: ' + Math.round(i/(inputTime/60));
-        cpmDiv.innerText = 'cpm: ' + Math.round(quanSymb)
-        // result.style.opacity = 1;
-        // result.innerHTML = result.innerHTML + `<img src="/img/сlose.png" alt="close" class="close id='close"> 
-        // <img src="/img/runer-silhouette-running-fast.png" alt="your-speed" class="speed"><div class='brawly'>Words per minute: ${wpm} <br> Characters per minute: ${quanSymb}</div> `
+        cpmDiv.innerText = 'cpm: ' + Math.round(quanSymb);
     }, inputTime*1000);
 
 }
@@ -157,6 +155,8 @@ function restart() {
     }
 
     clearTimeout(timerFunc)
+    wpmDiv.innerText = 'wpm: -';
+    cpmDiv.innerText = 'cpm: -';
     currTime = 0; 
     var poleVvode = document.getElementById('poleVvode');
     poleVvode.setAttribute('placeholder', 'write there');
