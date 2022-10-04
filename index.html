@@ -44,7 +44,7 @@
                 <label>
                     Quantity of words:
                 </label>
-                <input class="inputColor3" id="words" type="number" min="20" max="50" placeholder="20-50" value="30">
+                <input class="inputColor3" id="words" type="number" min="20" max="50" placeholder="20-50" value="25">
                 <button class="submitButton " onclick="filter()" id="allay"> allay </button>
             </div>
             <!-- <p style="opacity: 0;" id="p">done!</p> -->
@@ -52,6 +52,8 @@
     </main>
     <div class="flex filterAndTypePlace moveTop"> 
         <div class="curTime" id="curTime"> -- </div>
+        <div class="curTime" id="WPM">wpm: ---</div>
+        <div class="curTime" id="CPM">cpm: ---</div>
         <button class="restart " style="--order: 1.5" onclick="restart()">
         </button>
         <input class="inputColor2" id="poleVvode" onchange="poleVvode()" type="text" placeholder="write there">

@@ -8,8 +8,8 @@ var rusText = ['пудж', 'ручка', 'модный', 'современный
 var oldWords = [];
 let NowArr = [];
 let arrWords = [];
-var inputTime =30;
-var inputWords = 20;
+var inputTime = 30;
+var inputWords = 25;
 var i = 0;
 let quanSymb = 0;
 let currTime = inputTime;
@@ -90,9 +90,16 @@ function poleVvode() {
 
 function currentTime() {
     let divTime = document.getElementById('curTime');
-    currTime = inputTime
+    let wpmDiv = document.getElementById('WPM')
+    let cpmDiv = document.getElementById('CPM')
+
+    currTime = inputTime;
     divTime.innerText = currTime;
+    // wpmDiv.innerText = 'wpm: ' + Math.round(i/(currTime/60));
+    // cpmDiv.innerText = 'cpm: ' + Math.round(quanSymb/(currTime/60))
     let b = setInterval(() => {
+        // wpmDiv.innerText = 'wpm: ' + Math.round(i/(currTime/60));
+        // cpmDiv.innerText = 'cpm: ' + Math.round(quanSymb/(currTime/60))
         currTime -= 1
         divTime.innerText = currTime;
         if (currTime <= 0) {
@@ -107,6 +114,8 @@ function currentTime() {
 function timer() {
     quanSymb = 0;
     timerFunc = setTimeout(() => {
+        let wpmDiv = document.getElementById('WPM')
+        let cpmDiv = document.getElementById('CPM')
         var poleVvode = document.getElementById('poleVvode');
         poleVvode.value = '';
         poleVvode.setAttribute('disabled', 'disabled');
@@ -114,6 +123,7 @@ function timer() {
         wpm = Math.round(i/(inputTime/60));
         let word
 
+        
         for (c = 0; c < i; c++) {
             word = arrWords[c];
             quanSymb += word.length;
@@ -122,10 +132,11 @@ function timer() {
 
         quanSymb = Math.round(quanSymb/(inputTime/60))
 
-        
-        result.style.opacity = 1;
-        result.innerHTML = result.innerHTML + `<img src="/img/сlose.png" alt="close" class="close id='close"> 
-        <img src="/img/runer-silhouette-running-fast.png" alt="your-speed" class="speed"><div class='brawly'>Words per minute: ${wpm} <br> Characters per minute: ${quanSymb}</div> `
+        wpmDiv.innerText = 'wpm: ' + Math.round(i/(inputTime/60));
+        cpmDiv.innerText = 'cpm: ' + Math.round(quanSymb)
+        // result.style.opacity = 1;
+        // result.innerHTML = result.innerHTML + `<img src="/img/сlose.png" alt="close" class="close id='close"> 
+        // <img src="/img/runer-silhouette-running-fast.png" alt="your-speed" class="speed"><div class='brawly'>Words per minute: ${wpm} <br> Characters per minute: ${quanSymb}</div> `
     }, inputTime*1000);
 
 }
