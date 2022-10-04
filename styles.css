@@ -85,17 +85,18 @@ ul button:hover {
 }
 
 .submitButton {
+    display: inline-block;
     font-family: Nunito;
     font-weight: 600;
-    font-size: 17.5px;
-    padding: 7.5px 10px;
+    font-size: 15px;
+    padding: 2.5px 10px;
     margin: auto;
-    border: none;
+    border: 1.5px solid black;
     border-radius: 10px;
     transition: 0.35s;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, .3);
-    background-color: white;
+    background-color: rgb(0, 0, 0, 0);
     color: var(--txtMainColor);
 }
 
@@ -103,6 +104,7 @@ ul button:hover {
 	background: #9fd289;
     box-shadow: 0 0 8px 1px #76bf57;
     color: white;
+    border-color: #9fd289;
     transform: translateY(-2px);
 }
 
@@ -127,6 +129,7 @@ input::-webkit-inner-spin-button {
     border: none;
     transition: .6s;
     cursor: pointer;
+    padding: 0px;
 }
 
 .restart:hover {
@@ -144,6 +147,7 @@ input::-webkit-inner-spin-button {
 }
 
 .filterAndTypePlace {
+    display: flex;
     font-size: 20px;
     position: fixed;
     justify-content: center;
@@ -160,7 +164,7 @@ input::-webkit-inner-spin-button {
 }
 
 .curTime {
-    margin: auto;
+    margin: auto 10px;
     font-weight: bold;
 }
 
@@ -366,12 +370,30 @@ ul li {
     width: 50px;
 }
 
+.parameters {
+    display: flex;
+    justify-content: space-around;
+    margin: auto 20px;
+}
+
+.info {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
 
 /* mobile version */
 
 @media screen and (max-width: 900px){
+    .parameters {
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+    
     .filterAndTypePlace {
-        font-size: 30px;
+        display: block;
+        font-size: 20px;
         border-radius: 0px 0px 0 0;
         padding: calc(var(--padding)*2);
         width: 100%;
@@ -379,11 +401,11 @@ ul li {
 
     .text {
         margin-bottom: 50px;
-        font-size: 55px;
+        font-size: 30px;
     }
     
     main{
-        margin: 100px 50px 0px;
+        margin: 50px 25px 0px;
     }
 
     nav {
@@ -406,34 +428,27 @@ ul li {
     }
 
     .filters {
-        font-size: 25px;
+        font-size: 15px;
         flex-wrap: wrap;
         transition: 0.5s;
         justify-content: center;
         margin-bottom: 120px;
+        text-align: center;
     }
     
     .submitButton {
-        font-size: 20px;
-        margin: auto 20px;
+        font-weight: 500;
+        font-size: 15px;
     }
     
     .restart {
-        background-image: url(/img/undo-black.png); /* made by Rahul Kaklotar */
-        background-size: 30px;
-        background-repeat: no-repeat;
-        background-color: rgb(0, 0, 0, 0);
-        width: 30px;
-        height: 30px;
-        margin: auto 20px;
-        border: none;
-        transition: .6s;
-        cursor: pointer;
+        
     }
 
     .inputColor2 {
         border-color: var(--link2Color);
-        margin: auto 20px;
+        margin: auto;
+        padding: 0;
     }
 
     .inputColor1 {
@@ -447,11 +462,12 @@ ul li {
     }
 
     .curTime {
-        margin: auto 20px;
+        margin: auto;
     }
 
     .nav-link {
-        font-size: 25px;
+        font-size: 20px;
+        margin: auto 7px;
     }
 
     .circle {
