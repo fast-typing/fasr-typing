@@ -17,6 +17,7 @@ let clearResult = result.outerHTML;
 var wpm;
 let timerFunc;
 
+
 function randomArr(array) {
     array.sort(() => Math.random() - 0.5);
 
