@@ -5,8 +5,8 @@ var textDefault = document.getElementById("text").innerText;
 let result = document.getElementById('result');
 let wpmDiv = document.getElementById('WPM')
 let cpmDiv = document.getElementById('CPM')
-var engText = ['pudge', 'function', 'document', 'element', 'bookmark', 'attribute', 'condition', 'accessing', 'temperature', 'notebook', 'birthday','imbalanced','cool','Obama','crash','computer','text','firewall','hardware','development','netiquette','equipment','install','search','update','stack','application','cat','debug','delete','disconnect','enable','reboot','verify','compile','database','eject','folder','layout','namespace','outsource','password','upload','interface','backup','class','variable','property','response','current', 'is', 'square', 'enjoy', 'young', 'go', 'type', 'panda', 'end', 'dog', 'get', 'axe', 'tea', 'tree', 'house', 'work', 'walk', 'hi', 'cow', 'brick', 'grass', 'missed', 'popular', 'empty', 'fingsrs', 'neutral', 'vitamine', 'difficult'  ]
-var rusText = ['пудж', 'ручка', 'модный', 'современный', 'пранк', 'цикада', 'кошка', 'узбекистак', 'таджик', 'микрофон', 'линейка', 'ластик', 'наушники', 'процессор', 'стол', 'полка', 'маркер', 'кубик', 'арбуз', 'черешня', 'фантик', 'лимонад', 'вирус', 'юбилей', 'работа', 'терпение', 'сковорода', 'хобот', 'утро', 'скакалка', 'цитрус', 'мигрень', 'йогурт', 'эскимо', 'жаргон', 'зарождение', 'пирог', 'ведро', 'лебедь', 'табуретка', 'тетрадка', 'тетрадка', 'чаепитие', 'работа', 'яблоко', 'шоколад', 'антиутопия', 'месяц', 'щегол', 'обводка'];
+var engText = ['pudge', 'function', 'document', 'element', 'bookmark', 'attribute', 'condition', 'accessing', 'temperature', 'notebook', 'birthday','imbalanced','cool','Obama','crash','computer','text','firewall','hardware','development','netiquette','equipment','install','search','update','stack','application','cat','debug','delete','disconnect','enable','reboot','verify','compile','database','eject','folder','layout','namespace','outsource','password','upload','interface','backup','class','variable','property','response','current', 'is', 'square', 'enjoy', 'young', 'go', 'type', 'panda', 'end', 'dog', 'get', 'axe', 'tea', 'tree', 'house', 'work', 'walk', 'hi', 'cow', 'brick', 'grass', 'missed', 'popular', 'empty', 'fingers', 'neutral', 'vitamine', 'difficult', 'probably', 'line', 'island']
+var rusText = ['пудж', 'ручка', 'модный', 'современный', 'пранк', 'цикада', 'кошка', 'узбекистан', 'таджик', 'микрофон', 'линейка', 'ластик', 'наушники', 'процессор', 'стол', 'полка', 'маркер', 'кубик', 'арбуз', 'черешня', 'фантик', 'лимонад', 'вирус', 'юбилей', 'корона', 'терпение', 'сковорода', 'хобот', 'утро', 'скакалка', 'цитрус', 'мигрень', 'йогурт', 'эскимо', 'жаргон', 'зарождение', 'пирог', 'ведро', 'лебедь', 'табуретка', 'тетрадка', 'тетрадка', 'чаепитие', 'работа', 'яблоко', 'шоколад', 'антиутопия', 'месяц', 'щегол', 'обводка', 'растение', 'глобус', 'земля', 'он', 'часы', 'память', 'карта', 'брелок', 'пенал', 'учитель', 'линейка', 'коробка', 'ось', 'маркер', 'гитара', 'темнота', 'монитор', 'замок', 'бумага', 'обруч', 'шар', 'наушники', 'цветок', 'микроскоп', 'паук', 'боязнь'];
 var oldWords = [];
 let NowArr = [];
 let arrWords = [];
@@ -129,7 +129,6 @@ function timer() {
         for (c = 0; c < i; c++) {
             word = arrWords[c];
             quanSymb += word.length;
-            console.log(quanSymb)
         }
 
         quanSymb = Math.round(quanSymb/(inputTime/60))
