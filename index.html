@@ -47,27 +47,21 @@
                 <input class="inputColor3" id="words" type="number" min="20" max="50" placeholder="20-50" value="40">
                 <button class="submitButton " onclick="filter()" id="allay"> allay </button>
             </div>
-            <!-- <p style="opacity: 0;" id="p">done!</p> -->
         </div> 
     </main>
     <div class="flex filterAndTypePlace moveTop"> 
-<!--         <div class="parameters"> -->
+        <div class="parameters">
             <div class="curTime" id="curTime"> -- </div>
             <div class="curTime" id="WPM">wpm: -</div>
             <div class="curTime" id="CPM">cpm: -</div>
-<!--         </div> -->
-<!--         <div class="info"> -->
+        </div>
+        <div class="parameters">
             <button class="restart " style="--order: 1.5" onclick="restart()"></button>
 
             <input class="inputColor2" id="poleVvode" onchange="poleVvode()" type="text" placeholder="write there">
 
             <button class="submitButton" id="filter" onclick="filterShowHide()"> filters </button>
-
-<!--         </div> -->
-    </div>
-    <div class="result" id="result">
-        <!-- <img src="/img/сlose.png" alt="close" class="close" onclick="hide()"> 
-        <img src="/img/runer-silhouette-running-fast.png" alt="your-speed" class="speed">  -->
+        </div>
     </div>
 </body>
 <script src="script.js"> </script>
