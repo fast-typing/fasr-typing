@@ -120,12 +120,12 @@ input::-webkit-inner-spin-button {
 
 .restart {
     background-image: url(/img/undo-black.png); /* made by Rahul Kaklotar */
-    background-size: 30px;
+    background-size: 28px;
     background-repeat: no-repeat;
     background-color: rgb(0, 0, 0, 0);
-    width: 30px;
-    height: 30px;
-    margin: auto s;
+    width: 28px;
+    height: 28px;
+    margin: auto;
     border: none;
     transition: .6s;
     cursor: pointer;
@@ -165,7 +165,7 @@ input::-webkit-inner-spin-button {
 }
 
 .curTime {
-    margin: auto 10px;
+    margin: auto 5px;
     font-weight: bold;
 }
 
@@ -363,7 +363,8 @@ ul li {
 
 .inputColor2 {
     border-color: var(--link2Color);
-    margin: auto 5px;
+    margin: 0px 5px;
+    padding: 0 5px;
 }
 
 .inputColor3 {
@@ -373,7 +374,7 @@ ul li {
 
 .parameters {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto 10px;
 }
 
@@ -388,7 +389,7 @@ ul li {
 @media screen and (max-width: 900px){
     .parameters {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         margin: auto;
     }
     
@@ -441,12 +442,13 @@ ul li {
     .submitButton {
         font-weight: 500;
         font-size: 15px;
+        margin: 0;
     }
 
     .inputColor2 {
         border-color: var(--link2Color);
-        margin: auto;
         padding: 0;
+        width: 130px;
     }
 
     .inputColor1 {
@@ -460,7 +462,7 @@ ul li {
     }
 
     .curTime {
-        margin: auto;
+        margin: 0;
     }
 
     .nav-link {
@@ -476,7 +478,29 @@ ul li {
     .parameters {
         display: flex;
         justify-content: space-between;
-        margin: 5px 50px;
+        margin: 5px 20px;
+    }
+
+    .restart {
+        background-image: url(/img/undo-black.png); /* made by Rahul Kaklotar */
+        background-size: 28px;
+        background-repeat: no-repeat;
+        background-color: rgb(0, 0, 0, 0);
+        width: 28px;
+        height: 28px;
+        margin: 0;
+        border: none;
+        transition: .6s;
+        cursor: pointer;
+        padding: 0px;
+    }
+
+    .right {
+        margin-right: 50px;
+    }
+
+    .left {
+        margin-left: 50px;
     }
     
 }

@@ -51,16 +51,16 @@
     </main>
     <div class="flex filterAndTypePlace moveTop"> 
         <div class="parameters">
-            <div class="curTime" id="curTime"> -- </div>
+            <div class="curTime left" id="curTime"> -- </div>
             <div class="curTime" id="WPM">wpm: -</div>
-            <div class="curTime" id="CPM">cpm: -</div>
+            <div class="curTime right" id="CPM">cpm: -</div>
         </div>
         <div class="parameters">
-            <button class="restart " style="--order: 1.5" onclick="restart()"></button>
+            <button class="restart left" style="--order: 1.5" onclick="restart()"></button>
 
             <input class="inputColor2" id="poleVvode" onchange="poleVvode()" type="text" placeholder="write there">
 
-            <button class="submitButton" id="filter" onclick="filterShowHide()"> filters </button>
+            <button class="submitButton right" id="filter" onclick="filterShowHide()"> filters </button>
         </div>
     </div>
 </body>
