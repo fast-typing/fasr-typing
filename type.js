@@ -15,7 +15,6 @@ var inputWords = 40;
 var i = 0;
 let quanSymb = 0;
 let currTime = inputTime;
-let clearResult = result.outerHTML;
 var wpm;
 let timerFunc;
 
@@ -137,11 +136,6 @@ function timer() {
         cpmDiv.innerText = 'cpm: ' + Math.round(quanSymb);
     }, inputTime*1000);
 
-}
-
-document.getElementById('result').onclick = function hide() {
-    result.style.opacity = 0;
-    result.innerHTML = clearResult;
 }
 
 function restart() {
