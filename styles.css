@@ -136,6 +136,10 @@ input::-webkit-inner-spin-button {
     transform: rotate(270deg);
 }
 
+.github {
+    text-align: center;
+}
+
 .header {
     width: 100%;
     position: fixed;
