@@ -1,11 +1,8 @@
-:root {
+body {
     --txtMainColor: rgb(221, 221, 221);     /* Цвет основного текста */
     --link1Color: #d92139;     /* Цвет 1 ссылки */
     --link2Color: #e99a24;     /* Цвет 2 ссылки */
     --link3Color: #10a44a;     /* Цвет 3 ссылки */
-}
-
-body {
     background-color: rgb(75, 75, 75);
     color: var(--txtMainColor);
 }
@@ -23,7 +20,7 @@ ul li{
     color: var(--txtMainColor);
 }
 
-.header, .filterAndTypePlace{
+.header, .filterAndTypePlace, .help:hover::after{
     background-color: rgb(37, 37, 37);
 }
 
@@ -48,7 +45,7 @@ ul {
 }
 
 .submitButton {
-    color: black;
+    border-color: var(--txtMainColor);
 }
 
 .submitButton:hover {

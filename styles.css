@@ -1,17 +1,13 @@
-:root {
-    --padding: 8px;
-    --margin: 8px;
-    --txtMainColor: black;     /* Цвет основного текста */
-    --link1Color: #12406a;     /* Цвет 1 ссылки */
-    --link2Color: #eb8f90;     /* Цвет 2 ссылки */
-    --link3Color: #ffb471;     /* Цвет 3 ссылки */
-}
-
-
 body {
     font-family: Nunito;
     font-size: 20px;
     margin: 0;
+    --padding: 8px;
+    --margin: 8px;
+    --txtMainColor: black;     /* Цвет основного текста */
+    --link1Color: #6363b6;     /* Цвет 1 ссылки */
+    --link2Color: #eb8f90;     /* Цвет 2 ссылки */
+    --link3Color: #ffb471;     /* Цвет 3 ссылки */
 }
 
 nav {
@@ -21,7 +17,6 @@ nav {
     margin: auto 10px;
     margin-top: -100px;
 }
-
 
 main{
     margin: 7.5% 12.5% 0%;
@@ -35,7 +30,7 @@ a {
 i {
     width: 18px;
     height: 18px;
-    border-radius:5px;
+    border-radius:50000000px;
     margin: 5px;
 }
 
@@ -87,25 +82,25 @@ ul button:hover {
 .submitButton {
     display: inline-block;
     font-family: Nunito;
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 500;
+    font-size: 20px;
     padding: 2.5px 10px;
-    margin: auto;
-    border: 1.5px solid black;
+    margin: auto 10px;
+    border: 0px;
     border-radius: 10px;
     transition: 0.35s;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, .1);
     box-shadow: rgba(0, 0, 0, .3);
-    background-color: rgb(0, 0, 0, 0);
     color: var(--txtMainColor);
 }
 
 .submitButton:hover {
-	background: #9fd289;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .3);
+    background: #9fd289;
     box-shadow: 0 0 8px 1px #76bf57;
-    color: white;
-    border-color: #9fd289;
     transform: translateY(-2px);
+    color: white;
 }
 
 .filter {
@@ -114,7 +109,7 @@ ul button:hover {
 }
 
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+    appearance: none;
     margin: 0;
 }
 
@@ -125,7 +120,7 @@ input::-webkit-inner-spin-button {
     background-color: rgb(0, 0, 0, 0);
     width: 28px;
     height: 28px;
-    margin: auto;
+    margin: auto 10px;
     border: none;
     transition: .6s;
     cursor: pointer;
@@ -153,23 +148,22 @@ input::-webkit-inner-spin-button {
 .filterAndTypePlace {
     font-size: 20px;
     position: fixed;
-    justify-content: center;
+    justify-content: space-evenly;
     bottom: 20px;
     z-index: 2;
     background-color: #e7e6e6;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 7.5px 2.5px rgba(0, 0, 0, .3);
-    padding: calc(var(--padding)*2);
-    width: 550px;
+    width: 650px;
     margin:auto;
     left:0;
     right:0;
-    padding: 20px 10px;
+    padding: 20px 0px;
     text-align: center;
 }
 
 .curTime {
-    margin: auto 5px;
+    margin: auto 10px;
     font-weight: bold;
 }
 
@@ -238,6 +232,7 @@ input::-webkit-inner-spin-button {
     background-size: 4px 3px;
 }
 
+
 .text {
     height: 100%;
     text-indent: 40px;
@@ -248,6 +243,29 @@ input::-webkit-inner-spin-button {
 
 .text::selection{
     background: transparent;
+}
+
+.help {
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url(/img/free-icon-faq-2408089.png);
+    background-size: 40px;
+}
+
+.help:hover::after {
+    content: attr(data-title);
+    position: absolute; /* Абсолютное позиционирование */
+    left: -700%; 
+    top: -300%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 17px;
+    width: 300px;
 }
 
 /* animations */
@@ -305,10 +323,20 @@ input::-webkit-inner-spin-button {
 }
 
 @keyframes slideDown {
-    0% { transform: translateY(0px); opacity: 1;}
+    0% { transform: translateY(0px); opacity: 1; }
     100% { transform: translateY(-15px); opacity: 0;}
 }
 
+.krut {
+    animation-name: slideSlide;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+}
+
+@keyframes slideSlide {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 /* custom.html */
 
@@ -341,7 +369,7 @@ ul li {
 .circle {
     width: 25px;
     height: 25px;
-    border-radius: 100px;
+    border-radius: 10000px;
     margin: auto 10px;
     padding: 10px;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, .3);
@@ -367,7 +395,7 @@ ul li {
 
 .inputColor2 {
     border-color: var(--link2Color);
-    margin: 0px 5px;
+    margin: 0px 10px;
     padding: 0 5px;
 }
 
@@ -380,6 +408,7 @@ ul li {
     display: flex;
     justify-content: space-between;
     margin: auto 10px;
+    width: auto;
 }
 
 .info {
@@ -388,15 +417,25 @@ ul li {
     justify-content: space-around;
 }
 
+.customColor {
+    height: 60px;
+    width: 60px;
+    margin: auto 10px;
+    background-color: transparent;
+    border: none;
+    
+}
+
+.customColor::-webkit-color-swatch {
+    border-radius: 10000px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+}
+
+
 /* mobile version */
 
 @media screen and (max-width: 900px){
-    .parameters {
-        display: flex;
-        justify-content: space-evenly;
-        margin: auto;
-    }
-    
     .filterAndTypePlace {
         display: block;
         font-size: 20px;
@@ -423,7 +462,7 @@ ul li {
     i {
         width: 20px;
         height: 20px;
-        border-radius:5px;
+        border-radius:5000px;
         margin: 5px;
     }
     
@@ -505,6 +544,17 @@ ul li {
 
     .left {
         margin-left: 50px;
+    }
+
+    .help {
+        text-align: center;
+        position: fixed;
+        right: 10px;
+        bottom: 100px;
+        width: 40px;
+        height: 40px;
+        background-image: url(/img/free-icon-faq-2408089.png);
+        background-size: 40px;
     }
     
 }

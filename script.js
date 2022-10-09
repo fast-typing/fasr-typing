@@ -31,9 +31,9 @@ if (localStorage.getItem('test') == 2){
 } else if (localStorage.getItem('test') == 3) {
     let theme = document.getElementById('theme')
     theme.href = 'theme-3.css'
-} else if (localStorage.getItem('test') == 4) {
-    let theme = document.getElementById('theme')
-    theme.href = 'theme-4.css'
+// } else if (localStorage.getItem('test') == 4) {
+//     let theme = document.getElementById('theme')
+//     theme.href = 'theme-4.css'
 } else {
     let theme = document.getElementById('theme')
     theme.href = 'theme-1.css'

@@ -1,13 +1,10 @@
-:root {
+body {
+    background-color: #f8d4ba;
+    color: var(--txtMainColor);
     --txtMainColor: black;     /* Цвет основного текста */
     --link1Color: #d69f3a;     /* Цвет 1 ссылки */
     --link2Color: #c34f5a;     /* Цвет 2 ссылки */
     --link3Color: #7f3535;     /* Цвет 3 ссылки */
-}
-
-body {
-    background-color: #f8d4ba;
-    color: var(--txtMainColor);
 }
 
 form, .text {

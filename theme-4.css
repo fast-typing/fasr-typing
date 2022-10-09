@@ -1,11 +1,8 @@
-:root {
+body {
     --txtMainColor: black;     /* Цвет основного текста */
     --link1Color: #859f3c  ;     /* Цвет 1 ссылки */
     --link2Color: #007f52  ;   /* Цвет 2 ссылки */
     --link3Color: #45451f ;   /* Цвет 3 ссылки */
-}
-
-body {
     background-color: #ebe5d9;
     color: var(--txtMainColor);
 }

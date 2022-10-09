@@ -36,8 +36,8 @@
             </div>
             <div class="filter-language moveTop filter" style="--order: 1.5"> 
                 <label>Choose your language:
-                <input type="radio" name="browser" id="eng"> English
-                <input type="radio" name="browser" id="rus"> Russia
+                <input type="radio" name="browser" id="eng" onclick="filter()"> English
+                <input type="radio" name="browser" id="rus" onclick="filter()"> Russia
                 </label>
             </div>
             <div class="filter-count-lists moveTop filter" style="--order: 2"> 
@@ -56,12 +56,15 @@
             <div class="curTime right" id="CPM">cpm: -</div>
         </div>
         <div class="parameters">
-            <button class="restart left" style="--order: 1.5" onclick="restart()"></button>
+            <button class="restart left" onclick="restart()"></button>
 
             <input class="inputColor2" id="poleVvode" onchange="poleVvode()" type="text" placeholder="write there">
 
             <button class="submitButton right" id="filter" onclick="filterShowHide()"> filters </button>
         </div>
+    </div>
+    <div class="help krut" id="help" style="--order: 1.5" data-title="этот сайт поможет вам научиться быстрее печатать (wpm - words per minute, cpm - characters per minute). Приятного времяпрепровождения!">
+        <!-- *этот сайт поможет вам научиться быстрее печатать (wpm - words per minute, cpm - characters per minute)* -->
     </div>
 </body>
 <script src="script.js"> </script>
