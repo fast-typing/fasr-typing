@@ -1,27 +1,25 @@
 body {
-    --txtMainColor: rgb(221, 221, 221);     /* Цвет основного текста */
+    --txtMainColor: #f2f3f4;     /* Цвет основного текста */
     --link1Color: #d92139;     /* Цвет 1 ссылки */
     --link2Color: #e99a24;     /* Цвет 2 ссылки */
     --link3Color: #10a44a;     /* Цвет 3 ссылки */
     background-color: rgb(75, 75, 75);
     color: var(--txtMainColor);
+    --bgcolor: rgb(37, 37, 37);
 }
 
 form, input, .nav-link, .text  {
     color: var(--txtMainColor);
 }
 
-ul button {
-    background-color: rgb(201, 201, 201);
-}
-
 ul li{
-    background-color: rgb(37, 37, 37);
+    background-color: var(--bgcolor);
     color: var(--txtMainColor);
 }
 
-.header, .filterAndTypePlace, .help:hover::after{
-    background-color: rgb(37, 37, 37);
+
+.header, .filterAndTypePlace, .help:hover::after, .indicators{
+    background-color: var(--bgcolor);
 }
 
 .restart {

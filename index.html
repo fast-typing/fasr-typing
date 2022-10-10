@@ -27,6 +27,10 @@
         <div class="text moveTop" id="text">
         <!-- I think Pudge-Chen combo is really IMBALANCED! NaVi used this bug and won last game. First, this combo is not that hard for pro gamers. Second, this combo is different from the same one in war3 dota. Third, 2 normal skills shouldn't kill a hero with aegis easily. NICE BALANCE -->
         </div>
+        <div class="indicators moveTop" style="--order: 2">
+            <div class="wpmAndCpm" id="WPM">wpm: -</div>
+            <div class="wpmAndCpm" id="CPM">cpm: -</div>
+        </div>
         <div class="filters flex" id ='forms'>
             <div class="filter-time moveTop filter" style="--order: 1.5"> 
                 <label>
@@ -50,18 +54,10 @@
         </div> 
     </main>
     <div class="flex filterAndTypePlace moveTop"> 
-        <div class="parameters">
-            <div class="curTime left" id="curTime"> -- </div>
-            <div class="curTime" id="WPM">wpm: -</div>
-            <div class="curTime right" id="CPM">cpm: -</div>
-        </div>
-        <div class="parameters">
-            <button class="restart left" onclick="restart()"></button>
-
-            <input class="inputColor2" id="poleVvode" onchange="poleVvode()" type="text" placeholder="write there">
-
-            <button class="submitButton right" id="filter" onclick="filterShowHide()"> filters </button>
-        </div>
+        <div class="curTime" id="curTime"> -- </div>
+        <button class="restart" onclick="restart()"></button>
+        <input class="inputColor2" id="poleVvode" onchange="poleVvode()" type="text" placeholder="write there">
+        <button class="submitButton " id="filter" onclick="filterShowHide()"> filters </button>
     </div>
     <div class="help krut" id="help" style="--order: 1.5" data-title="этот сайт поможет вам научиться быстрее печатать (wpm - words per minute, cpm - characters per minute). Приятного времяпрепровождения!">
         <!-- *этот сайт поможет вам научиться быстрее печатать (wpm - words per minute, cpm - characters per minute)* -->
