@@ -132,6 +132,7 @@ input::-webkit-inner-spin-button {
 
 .github {
     text-align: center;
+    color: var(--txtMainColor);
 }
 
 .header {
@@ -296,6 +297,7 @@ input::-webkit-inner-spin-button {
 }
 
 .wpmAndCpm {
+    color: var(--txtMainColor);
     width: 190px;
     margin: auto 10px;
 }
