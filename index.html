@@ -10,7 +10,6 @@
     <style> @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap'); </style>
     </head>
 <body>
-    
     <div class="header flex">
         <a class="img-dots flex" href="index.html">
             <i class="moveToRight dot-1" style="--order: 2"></i>
@@ -25,7 +24,6 @@
     </div>
     <main id="main">
         <div class="text moveTop" id="text">
-        <!-- I think Pudge-Chen combo is really IMBALANCED! NaVi used this bug and won last game. First, this combo is not that hard for pro gamers. Second, this combo is different from the same one in war3 dota. Third, 2 normal skills shouldn't kill a hero with aegis easily. NICE BALANCE -->
         </div>
         <div class="indicators moveTop" style="--order: 2">
             <div class="wpmAndCpm" id="WPM">wpm: -</div>
@@ -39,15 +37,12 @@
                 <input class="inputColor1" id="time" type="number" min="30" max="180" placeholder="30-180" value="60">
             </div>
             <div class="filter-language moveTop filter" style="--order: 1.5"> 
-                <label>Choose your language:
+                <label>Choose your language:</label>
                 <input type="radio" name="browser" id="eng" onclick="filter()"> English
                 <input type="radio" name="browser" id="rus" onclick="filter()"> Russia
-                </label>
             </div>
             <div class="filter-count-lists moveTop filter" style="--order: 2"> 
-                <label>
-                    Quantity of words:
-                </label>
+                <label>Quantity of words:</label>
                 <input class="inputColor3" id="words" type="number" min="20" max="50" placeholder="20-50" value="40">
                 <button class="submitButton " onclick="filter()" id="allay"> allay </button>
             </div>
@@ -60,7 +55,6 @@
         <button class="submitButton " id="filter" onclick="filterShowHide()"> filters </button>
     </div>
     <div class="help krut" id="help" style="--order: 1.5" data-title="этот сайт поможет вам научиться быстрее печатать (wpm - words per minute, cpm - characters per minute). Приятного времяпрепровождения!">
-        <!-- *этот сайт поможет вам научиться быстрее печатать (wpm - words per minute, cpm - characters per minute)* -->
     </div>
 </body>
 <script src="script.js"> </script>
