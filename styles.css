@@ -187,10 +187,12 @@ input::-webkit-inner-spin-button {
 .nav-link {
     font-size: auto;
     margin: auto 20px;
-    padding: 0px 5px;
+    padding: 2px 7.5px;
     transition: background-size .4s;
     color: black;
     font-weight: bold;
+    transition: .5s;
+    border-radius: 7.5px 7.5px 0px 0px;
 }
 
 .nav-link:hover { 
@@ -266,8 +268,8 @@ input::-webkit-inner-spin-button {
 .help:hover::after {
     content: attr(data-title);
     position: absolute; /* Абсолютное позиционирование */
-    left: -550%; 
-    top: -250%;
+    left: -540%; 
+    top: -425%;
     background-color: var(--bgcolor);
     border-radius: 10px;
     padding: 10px;
@@ -463,6 +465,10 @@ ul li {
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, .3);
 }
 
+.end {
+    text-align: center;
+    margin-top: 20px;
+}
 
 /* mobile version */
 
