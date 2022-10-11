@@ -70,6 +70,7 @@ function filter( ) {
     } 
 }
 
+input.addEventListener('input', poleVvode)
 
 function poleVvode() {
     if (i == 0){
