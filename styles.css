@@ -167,6 +167,9 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
 }
 
+.prikol {
+    flex-wrap: wrap;
+}
 
 .img-dots {
     margin-left: -100px;
@@ -453,10 +456,9 @@ ul li {
 .customColor {
     height: 60px;
     width: 60px;
-    margin: auto 10px;
+    margin: auto 5px;
     background-color: transparent;
-    border: none;
-    
+    border: none; 
 }
 
 .customColor::-webkit-color-swatch {

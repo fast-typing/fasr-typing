@@ -38,10 +38,6 @@ ul li{
     background-color: var(--link3Color);
 }
 
-ul {
-    color: black;
-}
-
 .submitButton {
     border-color: var(--txtMainColor);
 }

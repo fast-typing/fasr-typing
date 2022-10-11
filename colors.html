@@ -10,13 +10,13 @@
     <style> @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap'); </style>  
 </head>  
 <body id="body" class="brawl">
-    <div class="header flex">
+    <div class="header flex" id="5">
         <a class="img-dots flex" href="index.html" >
             <i class="moveToRight dot-1" id="dot-1" style="--order: 2"></i>
             <i class="moveToRight dot-2" id="dot-2" style="--order: 1.5"></i>
             <i class="moveToRight dot-3" id="dot-3" style="--order: 1"></i>
         </a>
-        <nav>
+        <nav id="6">
             <a href='index.html' id="link-1" class="nav-link link-1 dropDown" style="--order: 3">home</a>
             <a href='colors.html' id="link-2" class="nav-link link-2 dropDown" style="--order: 3.5">themes</a>
             <a href='contacts.html' id="link-3"class="nav-link link-3 dropDown" style="--order: 4">contacts</a>
@@ -26,8 +26,8 @@
         <h1 class="moveTop">
             Themes:
         </h1>
-        <ul class="moveTop" style="--order: 6">
-            <li>
+        <ul class="moveTop" style="--order: 6" id="ul">
+            <li id="1">
                     <div class="themeName flex flex-wrap">
                         <div class="paddingMargin">
                             <b>Greek Getaway</b>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
             </li>
-            <li>
+            <li id="2">
                     <div class="flex">
                         <div class="paddingMargin">
                             <b>Rich Reds</b>
@@ -75,7 +75,7 @@
                         </div>
                     </div>
             </li>
-            <li>
+            <li id="3">
                     <div class="flex">
                         <div class="paddingMargin">
                             <b>Juicy Fruits</b>
@@ -99,23 +99,31 @@
                         </div>
                     </div>
             </li>
-            <li>
+            <li id="4">
                 <div class="flex">
                         <div class="paddingMargin">
                             <b>Custom</b>
                         </div>
+                        <button id='btn6' onclick="switchTheme4()">
+                            Save
+                        </button>
                     </div>
                     <div class="flex flex-wrap">
-                        <div class="flex margin-right">
-                            <div class="paddingMargin"> bg </div>
-                            <input class="customColor" id="colorWell" type="color">
+                        <div class="flex margin-right prikol">
+                            <label class="paddingMargin"> main bg </label>
+                            <input class="customColor" id="colorMainBG" type="color">
+                            <label class="paddingMargin">additional background</label>
+                            <input class="customColor" id="colorAddBG" type="color">
+                            
                         </div>
                         <div class="flex">
                             <div class="paddingMargin"> links </div>
-                            <div class=" flex">
+                            <div class=" flex prikol">
                                 <input class="customColor" id="color-1" type="color">
                                 <input class="customColor" id="color-2" type="color">
                                 <input class="customColor" id="color-3" type="color">
+                                <label class="paddingMargin"> text </label>
+                                <input class="customColor" id="textColor" type="color">
                             </div>
                         </div>
                     </div>
