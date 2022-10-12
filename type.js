@@ -68,6 +68,8 @@ function filter( ) {
     } else {
         randomArr(engText)
     } 
+
+    restartAll()
 }
 
 input.addEventListener('input', poleVvode)

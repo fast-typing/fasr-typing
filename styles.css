@@ -8,8 +8,9 @@ body {
     --link1Color: #6363b6;     /* Цвет 1 ссылки */
     --link2Color: #eb8f90;     /* Цвет 2 ссылки */
     --link3Color: #ffb471;     /* Цвет 3 ссылки */
-    --bgcolor: #f2f3f4; 
+    --bgcolor: #f2f3f4;
 }
+
 
 nav {
     display: flex;
@@ -167,6 +168,9 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
 }
 
+.prikol {
+    flex-wrap: wrap;
+}
 
 .img-dots {
     margin-left: -100px;
@@ -269,7 +273,7 @@ input::-webkit-inner-spin-button {
     content: attr(data-title);
     position: absolute; /* Абсолютное позиционирование */
     left: -540%; 
-    top: -450%;
+    top: -475%;
     background-color: var(--bgcolor);
     border-radius: 10px;
     padding: 10px;
@@ -453,10 +457,9 @@ ul li {
 .customColor {
     height: 60px;
     width: 60px;
-    margin: auto 10px;
+    margin: auto 5px;
     background-color: transparent;
-    border: none;
-    
+    border: none; 
 }
 
 .customColor::-webkit-color-swatch {
