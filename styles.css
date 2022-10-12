@@ -4,15 +4,13 @@ body {
     margin: 0;
     --padding: 8px;
     --margin: 8px;
-}
-
-.brawl {
     --txtMainColor: black;     /* Цвет основного текста */
     --link1Color: #6363b6;     /* Цвет 1 ссылки */
     --link2Color: #eb8f90;     /* Цвет 2 ссылки */
     --link3Color: #ffb471;     /* Цвет 3 ссылки */
-    --bgcolor: #f2f3f4; 
+    --bgcolor: #f2f3f4;
 }
+
 
 nav {
     display: flex;

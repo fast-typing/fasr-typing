@@ -1,4 +1,4 @@
-.brawl {
+body {
     background-color: #adbed2;
     color: var(--txtMainColor);
     --txtMainColor: black;     /* Цвет основного текста */
