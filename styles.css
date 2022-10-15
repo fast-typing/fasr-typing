@@ -273,7 +273,7 @@ input::-webkit-inner-spin-button {
     content: attr(data-title);
     position: absolute; /* Абсолютное позиционирование */
     left: -540%; 
-    top: -475%;
+    top: -425%;
     background-color: var(--bgcolor);
     border-radius: 10px;
     padding: 10px;
