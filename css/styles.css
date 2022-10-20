@@ -22,7 +22,7 @@ nav {
 }
 
 main{
-    margin: 12.5% 12.5% 0%;
+    margin: 250px 12.5% 0%;
     z-index: 2;
 }
 
@@ -104,8 +104,7 @@ ul button:hover {
 }
 
 .filter {
-    margin: auto var(--margin);
-    padding: var(--padding);
+    margin: auto 15px;
 }
 
 input::-webkit-inner-spin-button {
@@ -276,7 +275,7 @@ input::-webkit-inner-spin-button {
     content: attr(data-title);
     position: absolute; /* Абсолютное позиционирование */
     left: -540%; 
-    top: -425%;
+    top: -325%;
     background-color: var(--bgcolor);
     border-radius: 10px;
     padding: 10px;
