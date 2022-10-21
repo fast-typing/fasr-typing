@@ -21,6 +21,8 @@ let zapusk = 0
 let currTime = inputTime
 var wpm, timerFunc, interFunc
 
+console.log(document.getElementById("text").getBoundingClientRect())
+
 engText = engText.split(' ')
 rusText = rusText.split(' ')
 
