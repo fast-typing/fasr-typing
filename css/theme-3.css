@@ -12,7 +12,7 @@ form, input, .nav-link, .text  {
     color: var(--txtMainColor);
 }
 
-ul li{
+.ul .li{
     background-color: var(--bgcolor);
     color: var(--txtMainColor);
 }
