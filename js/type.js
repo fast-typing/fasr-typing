@@ -72,12 +72,14 @@ function changeLang() {
 }
 
 input.addEventListener('input', poleVvode)
-input.addEventListener('keyup', function() {
-  input.value = this.value.replace(' ', '');
-})
+// input.addEventListener('keyup', function() {
+  
+// })
 
 
 function poleVvode() {
+    input.value = this.value.replace(' ', '');
+    
     if (start == 0){
         zapusk = 0
         zapusk++
