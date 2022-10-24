@@ -81,6 +81,7 @@ h1 {
     box-shadow: var(--box-shadow); 
     border-radius: 10px 10px 0px 0px;
     background-color: #DCDCDC;
+    width: auto;
 }
 
 .ul button {
@@ -249,7 +250,7 @@ input::-webkit-inner-spin-button {
 .filterAndTypePlace {
     font-size: var(--font-size);
     position: fixed;
-    justify-content: space-around;
+    justify-content: space-evenly;
     bottom: 0px;
     background-color: var(--bgcolor);
     border-radius: 10px 10px 0 0;
@@ -428,13 +429,13 @@ input {
 }
 
 @keyframes slideTop {
-    0% { transform: translateY(-15px); opacity: 0;}
-    100% { transform: translateY(0px); opacity: 1;}
+    0% { transform: translateY(-15px); opacity: 0; }
+    100% { transform: translateY(0px); opacity: 1; }
 }
 
 @keyframes slideDown {
     0% { transform: translateY(0px); opacity: 1; }
-    100% { transform: translateY(-15px); opacity: 0;}
+    100% { transform: translateY(-15px); opacity: 0; }
 }
 
 .krut {
@@ -444,20 +445,8 @@ input {
 }
 
 @keyframes slideSlide {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-.triangle-top {
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 20px solid var(--bgcolor);
-    position: absolute;
-    right: 20px;
-    bottom: 62.5px;   
-    display: none; 
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .help {
@@ -476,8 +465,19 @@ input {
     background-position: center;
 }
 
+.triangle-top {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid var(--bgcolor);
+    position: absolute;
+    right: 10px;
+    bottom: -8px;   
+    z-index: 3;
+}
+
 .slider{
-    display: none;
     width: 200px;
     position: absolute;
     right: 10px;
@@ -488,11 +488,36 @@ input {
 }
 
 .slider .item{
+    z-index: 5;
     padding: 10px;
     padding-bottom: 40px;
     border-radius: 5px;
     background-color: var(--bgcolor);
 }
+
+.slider, .triangle-top {
+    opacity: 0;
+}
+
+.guideAnimIntro {
+    animation: guideAnimIntro .5s ease forwards;
+}
+
+@keyframes guideAnimIntro {
+    0% { display: none; opacity: 0; transform: translateY(-8px);} 
+    100% { display: block; opacity: 1; transform: translateY(0px);}
+}
+
+.guideAnimOutro {
+    animation: guideAnimOutro .5s ease forwards;
+}
+
+@keyframes guideAnimOutro {
+    0% { display: block; opacity: 1; transform: translateY(0px);}
+    100% { display: none; opacity: 0; transform: translateY(-8px);} 
+}
+
+
 
 .slider .previous, .slider .next {
     --bgSize: 15px;
@@ -602,7 +627,7 @@ li {
 
 /* mobile version */
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 650px){
     .filterAndTypePlace {
         font-size: 20px;
         border-radius: 0px 0px 0 0;
@@ -613,10 +638,12 @@ li {
 
     .text {
         margin-bottom: 25px;
+        height: 270px;
         /* font-size: 30px; */
     }
     
     main{
+        margin-top: 142px;
         margin-left: 25px;
         margin-right: 25px;
     } 
@@ -692,17 +719,11 @@ li {
     }
 
     .restart {
-        background-image: url(/img/undo-black.png); /* made by Rahul Kaklotar */
         background-size: 28px;
-        background-repeat: no-repeat;
-        background-color: rgb(0, 0, 0, 0);
         width: 28px;
         height: 28px;
         margin: 0;
-        border: none;
-        transition: .6s;
-        cursor: pointer;
-        padding: 0px;
+        padding: 0px
     }
 
     .help {
@@ -712,5 +733,40 @@ li {
         bottom: 70px;
         background-image: url(/img/free-icon-faq-2408089.png);
     }
+
+    .triangle-top {
+        right: 10px;
+    }
     
+    .slider{
+        width: 200px;
+        position: absolute;
+        right: 10px;
+        bottom: 130px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    
+    i {
+        width: 16px;
+        height: 16px;
+    }
+
+    .circle {
+        width: 20px;
+        height: 20px;
+        margin: auto 5px;
+    }
+
+    
+    .ul .li {
+        padding: 15px 25px;
+        margin: 20px;
+        border-bottom: 2.5px solid black;
+        box-shadow: var(--box-shadow); 
+        border-radius: 10px 10px 0px 0px;
+        background-color: #DCDCDC;
+        width: 100%;
+    }
 }

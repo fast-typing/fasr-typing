@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/css/theme-1.css" id="theme">
     <title> FAST TYPING</title>
     <style> @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap'); </style>
-    <link rel="shortcut icon" href="/img/free-icon-keyboard-5815382.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
     </head>
 <body id="body">
     <div class="header flex">
@@ -37,13 +37,13 @@
             </div>
             <div class="filter-language moveTop filter glup" style="--order: 1.5"> 
                 <label>Choose your language:</label>
-                <input type="radio" name="browser" id="eng" onclick="changeLang()" checked class="radio" > <label>Englsih</label>
-                <input type="radio" name="browser" id="rus" onclick="changeLang()" class="radio"> <label>Russia</label>
+                <input type="radio" name="browser" id="eng" onclick="restart()" checked class="radio" > <label>English</label>
+                <input type="radio" name="browser" id="rus" onclick="restart()" class="radio"> <label>Russian</label>
             </div>
                 <!-- <label>Quantity of words:</label>
                 <input class="inputColor3" id="words" type="number" min="20" max="50" placeholder="20-50" value="40"> -->
         </div> 
-        <div class="result"> <img src="/img/сlose.png" onclick="closeResult()"> </div>
+        <div class="result"> <img src="/img/сlose-black.png" onclick="closeResult()"> </div>
     </main>
     <div class="flex filterAndTypePlace krut"> 
         <div class="curTime tooltip" id="curTime"> -- <span class="tooltiptext">time</span> </div>
@@ -56,11 +56,8 @@
 
     <!-- Основной блок слайдера -->
     <div class="help krut" onclick="guide()"> </div>
-    <div class="triangle-top"></div>
+    
     <div class="slider">
-        <div class="item">
-            Слова нужно вводить без пробела в конце
-        </div>
         <div class="item">
             Введенное время автоматически применяется
         </div>
@@ -72,6 +69,7 @@
         </div>
         <a class="next" onclick="previousSlide()"></a>
         <a class="previous" onclick="nextSlide()"></a>  
+        <div class="triangle-top"></div>
     </div>
 </body>
 <script src="/js/script.js"> </script>
