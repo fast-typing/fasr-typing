@@ -73,7 +73,7 @@ function changeLang() {
 
 input.addEventListener('input', poleVvode)
 input.addEventListener('keyup', function() {
-  search.value = this.value.replace(' ', '');
+  input.value = this.value.replace(' ', '');
 })
 
 
