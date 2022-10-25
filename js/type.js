@@ -122,6 +122,15 @@ function timer() {
             wpm = Math.round(i/(inputTime/60))
             resultWPM.style.display = 'block'
             resultWPM.innerHTML = resultWPM.innerHTML + `wpm: ${wpm}` 
+
+            for (c = 0; c < i; c++) {
+                word = arrWords[c]
+                quanSymb += word.length
+            }
+
+            quanSymb = Math.round(quanSymb/(inputTime/60))
+            console.log(Math.round(quanSymb))
+
         }, inputTime*1000);
     }
 }
@@ -159,4 +168,5 @@ function restartAll() {
     TochkaOtsheta = 1
     idName = 1
     topCoor = 324
+    quanSymb = 0
 }
