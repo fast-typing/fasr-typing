@@ -8,6 +8,14 @@ body {
     --bgcolor: rgb(37, 37, 37);
 }
 
+.result div {
+    background-image: url(/img/close-white.png);
+}
+
+.zagolovokTheme3 {
+    color: #76bf57;
+}
+
 form, input, .nav-link, .text  {
     color: var(--txtMainColor);
 }

@@ -7,6 +7,10 @@ body {
     --link3Color: #7f3535;     /* Цвет 3 ссылки */
 }
 
+.zagolovokTheme2 {
+    color: #76bf57;
+}
+
 form, .text {
     color: var(--txtMainColor);
 }

@@ -40,21 +40,21 @@
                 <input type="radio" name="browser" id="eng" onclick="restart()" checked class="radio" > <label>English</label>
                 <input type="radio" name="browser" id="rus" onclick="restart()" class="radio"> <label>Russian</label>
             </div>
-                <!-- <label>Quantity of words:</label>
-                <input class="inputColor3" id="words" type="number" min="20" max="50" placeholder="20-50" value="40"> -->
         </div> 
-        <div class="result"> <img src="/img/сlose-black.png" onclick="closeResult()"> </div>
+        <div class="result">  
+            <div onclick="closeResult()">
+            </div>
+        </div>
     </main>
     <div class="flex filterAndTypePlace krut"> 
         <div class="curTime tooltip" id="curTime"> -- <span class="tooltiptext">time</span> </div>
         <div class="tooltip restartDiv"> <span class="tooltiptext">restart</span>  <button class="restart" onclick="restart()"> </button></div>
         <input class="inputColor2" id="poleVvode"  type="text" placeholder="write there">
-        <button class="submitButton tooltip" id="filter" onclick="filterShowHide()"> filters <span class="tooltiptext">show/hide</span> </button>
+        <button class="submitButton tooltip" id="filter" onclick="filterShowHide()"> options <span class="tooltiptext">show/hide</span> </button>
     </div>
     <!-- <div class="help krut" id="help" style="--order: 1.5">
     </div> -->
 
-    <!-- Основной блок слайдера -->
     <div class="help krut" onclick="guide()"> </div>
     
     <div class="slider">
@@ -63,6 +63,9 @@
         </div>
         <div class="item">
             По истичению времени вам будет доступен ваш результат
+        </div>
+        <div class="item">
+            Заголовок выделенной темы меняет свой цвет на зеленный
         </div>
         <div class="item">
             Приятного времяпрепровождения!

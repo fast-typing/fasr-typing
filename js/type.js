@@ -158,7 +158,7 @@ function restart() {
 
 function restartAll() {
     resultWPM.style.display = 'none' 
-    resultWPM.innerHTML = '<img src="/img/сlose-black.png" onclick="closeResult()">'
+    resultWPM.innerHTML = '<div onclick="closeResult()"> </div>'
     clearTimeout(timerFunc)
     clearInterval(interFunc)
     divTime.innerHTML = '-- <span class="tooltiptext">time</span>'
