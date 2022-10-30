@@ -5,9 +5,6 @@ body {
     --padding: 8px;
     --margin: 8px;
     --txtMainColor: black;     /* Цвет основного текста */
-    --link1Color: #6363b6;     /* Цвет 1 ссылки */
-    --link2Color: #eb8f90;     /* Цвет 2 ссылки */
-    --link3Color: #ffb471;     /* Цвет 3 ссылки */
     --bgcolor: #f2f3f4;
     --font-size: 17.5px;
     --box-shadow: 0 0 4px 1px rgba(0, 0, 0, .3);
@@ -62,10 +59,18 @@ h1 {
     margin: 15px 10px 15px 0;
 }
 
-/* .themeName {
-    display: flex;
-    justify-content: center;
-} */
+.themeName {
+    align-items: center;
+    line-height: 18px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.themeName::after {
+    color: #76bf57;
+    content:"\2022";
+    margin-left: 10px;
+}
 
 .ul {
     display: flex;
@@ -79,7 +84,7 @@ h1 {
     border-bottom: 2.5px solid black;
     box-shadow: var(--box-shadow); 
     border-radius: 10px 10px 0px 0px;
-    background-color: #DCDCDC;
+    background-color: var(--bgcolor);
     width: auto;
 }
 
@@ -102,6 +107,20 @@ h1 {
     box-shadow: 0 0 4px 1px #76bf57;
     color: white;
     transform: translateY(-2.5px);
+}
+
+.logo {
+    font-family: Quicksand;
+    font-weight: bolder;
+    font-size: 24px;
+    width: 200px;
+    margin-left: -100px;
+    color: var(--link3Color);
+    font-style: italic;
+}
+
+.logo b {
+    color: var(--txtMainColor);
 }
 
 .filters {
