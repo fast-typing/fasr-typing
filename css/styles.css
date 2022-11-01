@@ -40,7 +40,7 @@ input {
     border-style: none;
     font-size: var(--font-size);
     background-color: rgb(0, 0, 0, 0);
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 3px solid #e0e0e0;
     outline: none;
     transition: .3s;
 }
@@ -114,7 +114,6 @@ h1 {
     font-weight: bolder;
     font-size: 24px;
     width: 200px;
-    margin-left: -100px;
     color: var(--link3Color);
     font-style: italic;
 }
@@ -152,7 +151,7 @@ h1 {
     width: 30px;
     height: 30px;
     left: 74%;
-    top: 7.5px;
+    top: 9px;
     cursor: pointer;
     background-image: url(/img/close-black.png);
     background-size: 15px;
@@ -266,6 +265,7 @@ input::-webkit-inner-spin-button {
     top: 0;
     padding: 13px;
     z-index: 1;
+    height: 30px;
     background-color: var(--bgcolor);
     box-shadow: var(--box-shadow);
 }
@@ -408,7 +408,7 @@ input {
 .moveToRight {
     overflow: hidden;
     animation: moveToRight 1s ease forwards;
-    animation-delay: calc(var(--order) * 100ms);
+    animation-delay: calc(var(--order) * 50ms);
 }
 
 @keyframes moveToRight {
@@ -419,7 +419,7 @@ input {
 .dropDown {
     overflow: hidden;
     animation: dropDown 1s ease forwards;
-    animation-delay: calc(var(--order) * 100ms);
+    animation-delay: calc(var(--order) * 50ms);
 }
 
 @keyframes dropDown {
@@ -427,11 +427,22 @@ input {
     to { transform: translateY(100px);}
 }
 
+.dropDownLogo {
+    overflow: hidden;
+    animation: dropDownLogo 1s ease forwards;
+    animation-delay: calc(var(--order) * 50ms);
+}
+
+@keyframes dropDownLogo {
+    from { transform: translateY(-100px);}
+    to { transform: translateY(-5px);}
+}
+
 .moveTop {
     overflow: hidden;
     opacity: 0;
     animation: moveTop 1s ease forwards;
-    animation-delay: calc(var(--order) * 100ms);
+    animation-delay: calc(var(--order) * 50ms);
 }
 
 @keyframes moveTop {
@@ -464,7 +475,7 @@ input {
 .krut {
     animation-name: slideSlide;
     animation-timing-function: linear;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
 
 @keyframes slideSlide {
@@ -538,6 +549,19 @@ input {
 @keyframes guideAnimOutro {
     0% { display: block; opacity: 1; transform: translateY(0px);}
     100% { display: none; opacity: 0; transform: translateY(-8px);} 
+}
+
+#myChart {
+    padding: 20px;
+    background-color: var(--bgcolor);
+    border-radius: 10px;
+    font-size: 200px;
+}
+
+.bolshoi {
+    width: 400px;
+    font-size: 200px;
+
 }
 
 
