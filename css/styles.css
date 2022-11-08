@@ -562,7 +562,7 @@ input {
 }
 
 .help {
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     right: 10px;
     bottom: 10px;
@@ -803,11 +803,11 @@ select  {
 .registr {
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
+    padding: 40px 0px;
     align-items: center;
     background-color: var(--bgcolor);
     border-radius: 20px;
-    width: 400px;
+    width: 350px;
     text-align: center;
 }
 
@@ -822,16 +822,20 @@ select  {
 .registr div {
     width: 100%;
     justify-content: center;
-    margin: 15px;
+    margin: 30px 0px;
 }
 
 .registr input {
-    /* background-color: var(--bgcolor); */
+    background-color: var(--bgcolor);
     padding: 5px 10px;
 }
 
+.registr button {
+    padding: 5px 15px;
+}
+
 .registr img {
-    margin-right: 10px;
+    margin-right: 15px;
     height: 30px;
     align-items: center;
 }
@@ -840,6 +844,15 @@ select  {
     font-weight: bolder;
     margin-right: 100px;
     color: var(--link3Color);
+    transition: .2s;
+}
+
+.registr a:hover {
+   opacity: 0.8;
+}
+
+.registr h2 {
+    margin: 0;
 }
 
 /* mobile version */

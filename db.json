@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "username": "dasads",
+      "password": "12345678",
+      "maxWpm": 0,
+      "id": 1
+    },
+    {
+      "username": "admin",
+      "password": "admin",
+      "maxWpm": "29",
+      "id": 2
+    },
+    {
+      "username": "admin",
+      "password": "admin",
+      "maxWpm": "200",
+      "id": 3
+    }
+  ]
+}
