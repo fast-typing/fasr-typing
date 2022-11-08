@@ -11,7 +11,6 @@ function previousSlide() {
     showSlides(slideIndex -= 1);  
 }
 
-/* Функция перелистывания */
 function showSlides(n) {
     let slides = document.getElementsByClassName("item");
     
@@ -30,11 +29,15 @@ function showSlides(n) {
 }
 
 function guide() {
-    if (slider.style.display == 'block'){
-        slider.style.display = 'none'
-        triangle.style.display = 'none'
+    if (slider.classList.contains('guideAnimIntro')){
+        slider.classList.remove('guideAnimIntro')
+        slider.classList.add('guideAnimOutro')
+        triangle.classList.remove('guideAnimIntro')
+        triangle.classList.add('guideAnimOutro')
     } else {
-        slider.style.display = 'block'
-        triangle.style.display = 'block'
+        slider.classList.remove('guideAnimOutro')
+        slider.classList.add('guideAnimIntro')
+        triangle.classList.remove('guideAnimOutro')
+        triangle.classList.add('guideAnimIntro')
     }
 }

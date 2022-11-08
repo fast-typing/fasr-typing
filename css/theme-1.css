@@ -1,10 +1,19 @@
 body {
-    background-color: #adbed2;
+    --bgBodyColor: #adbed2;
+    background-color: var(--bgBodyColor);
     color: var(--txtMainColor);
     --txtMainColor: black;     /* Цвет основного текста */
     --link1Color: #ffb471;     /* Цвет 1 ссылки */
     --link2Color: #eb8f90;     /* Цвет 2 ссылки */
     --link3Color: #6363b6;     /* Цвет 3 ссылки */
+}
+
+.themeName1::after {
+    color: #76bf57;
+}
+
+.themeName2::after, .themeName3::after {
+    color: var(--bgcolor);
 }
 
 form, .text {

@@ -8,28 +8,23 @@
     <link rel="stylesheet" type="text/css" href="/css/theme-1.css" id="theme">
     <title> FAST TYPING</title>
     <style> @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap'); </style>
-    <link rel="shortcut icon" href="/img/free-icon-keyboard-5815382.png" type="image/x-icon">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap'); </style>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
     </head>
 <body id="body">
     <div class="header flex">
-        <a class="img-dots flex" href="index.html">
-            <i class="moveToRight dot-1" style="--order: 1.5"></i>
-            <i class="moveToRight dot-2" style="--order: 1"></i>
-            <i class="moveToRight dot-3" style="--order: 0.5"></i>
+        <a class="logo dropDownLogo flex" href="index.html" >
+            <div class="cool">Fast</div> <div class="da">Typing</div> 
         </a>
         <nav>
-            <a href='index.html' class="nav-link link-1 dropDown" style="--order: 1">home</a>
+            <a href='home.html' class="nav-link link-1 dropDown" style="--order: 1"> home</a>
             <a href='colors.html' class="nav-link link-2 dropDown" style="--order: 1.5">themes</a>
-            <a href='contacts.html' class="nav-link link-3 dropDown" style="--order: 2">contacts</a>
+            <a href='leaderboard.html' class="nav-link link-3 dropDown" style="--order: 2">leaderboard</a>
         </nav>
     </div>
     <main id="main">
         <div class="text moveTop" id="text">
         </div>
-        <!-- <div class="indicators moveTop" style="--order: 2">
-            <div class="wpmAndCpm" id="WPM">wpm: -</div>
-            <div class="wpmAndCpm" id="CPM">cpm: -</div>
-        </div> -->
         <div class="filters flex" id ='forms'>
             <div class="filter-time moveTop filter" style="--order: 1.5"> 
                 <label > Time (sec): </label>
@@ -37,30 +32,27 @@
             </div>
             <div class="filter-language moveTop filter glup" style="--order: 1.5"> 
                 <label>Choose your language:</label>
-                <input type="radio" name="browser" id="eng" onclick="changeLang()" checked class="radio" > <label>Englsih</label>
-                <input type="radio" name="browser" id="rus" onclick="changeLang()" class="radio"> <label>Russia</label>
+                <input type="radio" name="browser" id="eng" onclick="restart()" checked class="radio" > <label>English</label>
+                <input type="radio" name="browser" id="rus" onclick="restart()" class="radio"> <label>Russian</label>
             </div>
-                <!-- <label>Quantity of words:</label>
-                <input class="inputColor3" id="words" type="number" min="20" max="50" placeholder="20-50" value="40"> -->
         </div> 
-        <div class="result"> <img src="/img/сlose.png" onclick="closeResult()"> </div>
+        <div class="result">  
+            <div onclick="closeResult()">
+            </div>
+        </div>
     </main>
     <div class="flex filterAndTypePlace krut"> 
         <div class="curTime tooltip" id="curTime"> -- <span class="tooltiptext">time</span> </div>
         <div class="tooltip restartDiv"> <span class="tooltiptext">restart</span>  <button class="restart" onclick="restart()"> </button></div>
         <input class="inputColor2" id="poleVvode"  type="text" placeholder="write there">
-        <button class="submitButton tooltip" id="filter" onclick="filterShowHide()"> filters <span class="tooltiptext">show/hide</span> </button>
+        <button class="submitButton tooltip" id="filter" onclick="filterShowHide()"> options <span class="tooltiptext">show/hide</span> </button>
     </div>
     <!-- <div class="help krut" id="help" style="--order: 1.5">
     </div> -->
 
-    <!-- Основной блок слайдера -->
     <div class="help krut" onclick="guide()"> </div>
-    <div class="triangle-top"></div>
+    
     <div class="slider">
-        <div class="item">
-            Слова нужно вводить без пробела в конце
-        </div>
         <div class="item">
             Введенное время автоматически применяется
         </div>
@@ -68,10 +60,14 @@
             По истичению времени вам будет доступен ваш результат
         </div>
         <div class="item">
+            Заголовок выделенной темы меняет свой цвет на зеленный
+        </div>
+        <div class="item">
             Приятного времяпрепровождения!
         </div>
         <a class="next" onclick="previousSlide()"></a>
         <a class="previous" onclick="nextSlide()"></a>  
+        <div class="triangle-top"></div>
     </div>
 </body>
 <script src="/js/script.js"> </script>

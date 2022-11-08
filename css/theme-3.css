@@ -1,11 +1,24 @@
 body {
+    --bgBodyColor: rgb(75, 75, 75);
     --txtMainColor: #f2f3f4;     /* Цвет основного текста */
     --link1Color: #d92139;     /* Цвет 1 ссылки */
     --link2Color: #e99a24;     /* Цвет 2 ссылки */
     --link3Color: #10a44a;     /* Цвет 3 ссылки */
-    background-color: rgb(75, 75, 75);
+    background-color: var(--bgBodyColor);
     color: var(--txtMainColor);
     --bgcolor: rgb(37, 37, 37);
+}
+
+.result div {
+    background-image: url(/img/close-white.png);
+}
+
+.themeName3::after {
+    color: #76bf57;
+}
+
+.themeName1::after, .themeName2::after {
+    color: var(--bgcolor);
 }
 
 form, input, .nav-link, .text  {
@@ -18,7 +31,7 @@ form, input, .nav-link, .text  {
 }
 
 
-.header, .filterAndTypePlace, .help:hover::after, .indicators{
+.filterAndTypePlace, .help:hover::after, .indicators{
     background-color: var(--bgcolor);
 }
 

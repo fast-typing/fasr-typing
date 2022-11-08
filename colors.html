@@ -8,18 +8,19 @@
     <link rel="stylesheet" type="text/css" href="/css/theme-1.css" id="theme">
     <title> FAST TYPING</title>
     <style> @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap'); </style>  
+    <style> @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap'); </style>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
 </head>  
 <body id="body" class="brawl">
     <div class="header flex" id="5">
-        <a class="img-dots flex" href="index.html" >
-            <i class="moveToRight dot-1" id="dot-1" style="--order: 1.5"></i>
-            <i class="moveToRight dot-2" id="dot-2" style="--order: 1"></i>
-            <i class="moveToRight dot-3" id="dot-3" style="--order: 0.5"></i>
+        <a class="logo dropDownLogo flex" href="index.html">
+            <div class="cool">Fast</div> <div class="da">Typing</div> 
+            <!-- <img src="/img/logo-theme.png" alt="logo" class="moveToRight logo" style="--order: 1"> -->
         </a>
-        <nav id="6">
-            <a href='index.html' id="link-1" class="nav-link link-1 dropDown" style="--order: 1">home</a>
-            <a href='colors.html' id="link-2" class="nav-link link-2 dropDown" style="--order: 1.5">themes</a>
-            <a href='contacts.html' id="link-3"class="nav-link link-3 dropDown" style="--order: 2">contacts</a>
+        <nav>
+            <a href='home.html' class="nav-link link-1 dropDown" style="--order: 1"> home</a>
+            <a href='colors.html' class="nav-link link-2 dropDown" style="--order: 1.5">themes</a>
+            <a href='leaderboard.html' class="nav-link link-3 dropDown" style="--order: 2">leaderboard</a>
         </nav>
     </div>
     <main id="main">
@@ -27,12 +28,12 @@
             Themes:
         </h1>
         <div class="moveTop ul" style="--order: 2" id="ul">
-            <div class="li">
-                    <div class="themeName flex">
+            <div class="li ">
+                    <div class="themeName flex themeName1">
                         <div class="zagolovokTheme">
                             <b>Greek Getaway</b>
                         </div>
-                        <button id="btn1" onclick="switchTheme1()">
+                        <button id="btn1" onclick="switchTheme1()" class="zagolovokTheme1">
                             Choose
                         </button>
                     </div>
@@ -51,8 +52,8 @@
                         </div>
                     </div>
             </div>
-            <div class="li">
-                    <div class="themeName flex">
+            <div class="li ">
+                    <div class="themeName flex themeName2">
                         <div class="zagolovokTheme">
                             <b>Rich Reds</b>
                         </div>
@@ -76,8 +77,8 @@
                     </div>
             </div>
             <div class="li">
-                    <div class="flex themeName">
-                        <div class="zagolovokTheme ">
+                    <div class="flex themeName themeName3">
+                        <div class="zagolovokTheme">
                             <b>Juicy Fruits</b>
                         </div>
                         <button id='btn5' onclick="switchTheme3()">
