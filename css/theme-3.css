@@ -31,7 +31,7 @@ form, input, .nav-link, .text  {
 }
 
 
-.header, .filterAndTypePlace, .help:hover::after, .indicators{
+.filterAndTypePlace, .help:hover::after, .indicators{
     background-color: var(--bgcolor);
 }
 

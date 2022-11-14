@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,56 +8,71 @@
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/css/theme-1.css" id="theme">
     <title> FAST TYPING</title>
-    <style> @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap'); </style>
-    <style> @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap'); </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap');
+    </style>
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
-    </head>
+</head>
+
 <body id="body">
     <div class="header flex">
-        <a class="logo dropDownLogo" href="index.html" >
-            Fast <b>Typing</b> 
-            <!-- <img src="/img/logo-theme.png" alt="logo" class="moveToRight logo" style="--order: 1"> -->
+        <a class="logo dropDown flex" href="index.html">
+            <div class="cool">Fast</div>
+            <div class="da">Typing</div>
         </a>
         <nav>
-            <a href='home.html' class="nav-link link-1 dropDown" style="--order: 1">home</a>
+            <a href='home.html' class="nav-link link-1 dropDown" style="--order: 1"> home</a>
             <a href='colors.html' class="nav-link link-2 dropDown" style="--order: 1.5">themes</a>
-            <a href='contacts.html' class="nav-link link-3 dropDown" style="--order: 2">contacts</a>
+            <a href='leaderboard.html' class="nav-link link-3 dropDown" style="--order: 2">leaderboard</a>
+            <a href='login.html' class="dropDown nav-link " style="--order: 2.5"><img src="/img/user.png" class="reg-img" alt=""></a>
+            <b class="dropDown tooltip" id="reg-img" style="--order: 2.5"><span class="tooltiptext">offline</span></b>
         </nav>
     </div>
     <main id="main">
         <div class="text moveTop" id="text">
         </div>
-        <!-- <div class="indicators moveTop" style="--order: 2">
-            <div class="wpmAndCpm" id="WPM">wpm: -</div>
-            <div class="wpmAndCpm" id="CPM">cpm: -</div>
-        </div> -->
-        <div class="filters flex" id ='forms'>
-            <div class="filter-time moveTop filter" style="--order: 1.5"> 
-                <label > Time (sec): </label>
-                <input class="inputColor1" id="time" type="number" min="30" max="180" placeholder="30-180" value="60" onchange="filter()">
+        <div class="filters flex" id='forms'>
+            <div class="filter-time moveTop filter" style="--order: 1.5">
+                <label> Time (sec): </label>
+                <input class="inputColor1" id="time" type="number" min="30" max="180" placeholder="30-180" value="60"
+                    onchange="filter()">
             </div>
-            <div class="filter-language moveTop filter glup" style="--order: 1.5"> 
+            <div class="filter-language moveTop filter glup" style="--order: 1.5">
                 <label>Choose your language:</label>
-                <input type="radio" name="browser" id="eng" onclick="restart()" checked class="radio" > <label>English</label>
+                <input type="radio" name="browser" id="eng" onclick="restart()" checked class="radio">
+                <label>English</label>
                 <input type="radio" name="browser" id="rus" onclick="restart()" class="radio"> <label>Russian</label>
             </div>
-        </div> 
-        <div class="result">  
-            <div onclick="closeResult()">
-            </div>
+        </div>
+        <div class="result">
+            <p>
+                wpm<br>
+                <b id="wpm-result">--</b>
+            </p>
+            <p>
+                cpm<br>
+                <b id="cpm-result">--</b>
+            </p>
+            <p>
+                time<br>
+                <b id="time-result">--</b>
+            </p>
+            <img src="/img/close-black.png" class="close" onclick="restart()">
         </div>
     </main>
-    <div class="flex filterAndTypePlace krut"> 
+    <div class="flex filterAndTypePlace krut">
         <div class="curTime tooltip" id="curTime"> -- <span class="tooltiptext">time</span> </div>
-        <div class="tooltip restartDiv"> <span class="tooltiptext">restart</span>  <button class="restart" onclick="restart()"> </button></div>
-        <input class="inputColor2" id="poleVvode"  type="text" placeholder="write there">
+        <div class="tooltip restartDiv"> <span class="tooltiptext">restart</span> <button class="restart"
+                onclick="restart()"> </button></div>
+        <input class="inputColor2" id="poleVvode" type="text" placeholder="write there">
         <button class="submitButton tooltip" id="filter" onclick="filterShowHide()"> options <span class="tooltiptext">show/hide</span> </button>
     </div>
-    <!-- <div class="help krut" id="help" style="--order: 1.5">
-    </div> -->
 
     <div class="help krut" onclick="guide()"> </div>
-    
+
     <div class="slider">
         <div class="item">
             Введенное время автоматически применяется
@@ -70,8 +86,8 @@
         <div class="item">
             Приятного времяпрепровождения!
         </div>
-        <a class="next" onclick="previousSlide()"></a>
-        <a class="previous" onclick="nextSlide()"></a>  
+        <b class="next" onclick="previousSlide()"></b>
+        <b class="previous" onclick="nextSlide()"></b>
         <div class="triangle-top"></div>
     </div>
 </body>
@@ -80,4 +96,5 @@
 <script src="/js/filter.js"> </script>
 <script src="/js/slider.js"> </script>
 <!-- <script src="custom-theme.js"></script> -->
+
 </html>
