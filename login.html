@@ -16,6 +16,7 @@
 
 <body id="body">
     <div class="header flex">
+
         <a class="logo krut flex" href="index.html">
             <div class="cool">Fast</div>
             <div class="da">Typing</div>
@@ -29,23 +30,23 @@
                     id="networkText">offline</span></b>
         </nav>
     </div>
-
-    <main class="moveTop">
-        <h2 class="welcome">Hi guest! Nice to see you</h2>
-        <div class="info-user flex">
-            <div class="canvas-wrapper">
-                <canvas id="myChart" width="300" height="400"></canvas>
+    <main>
+        <div class="registr moveTop">
+            <a href="index.html" class="back-home"> <img src="/img/exit.png" alt=""> Back</a>
+            <h2>Login</h2>
+            <div class="flex">
+                <img src="/img/user.png" alt="">
+                <input type="text" class="name-reg login" placeholder="name">
             </div>
-            <div class="user-stats">
-                <p>Russian <b style="color: var(--link1Color);">Normal</b></p>
-                <p>The best wpm: <b style="color: var(--link2Color);">100</b></p>
-                <p>Average wpm: <b style="color: var(--link3Color);">34</b></p>
+            <div class="flex">
+                <img src="/img/padlock.png" alt="">
+                <input type="password" class="pass-reg login" placeholder="password"><br>
             </div>
+            <button type="submit" class="submitButton" onclick="SigninSignup()">Submit</button><br>
+            <a class="account" href="/register.html">create an account</a>
         </div>
     </main>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"> </script>
-<script src="/js/canvas.js"></script>
 <script src="/js/script.js"> </script>
 
 </html>
