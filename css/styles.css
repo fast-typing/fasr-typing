@@ -877,13 +877,13 @@ select  {
     font-weight: 600;
 }
 
-/* nav b{
+nav b{
     width: 6px;
     height: 6px;
     background-color: #7a7a7a;
     border-radius: 200px;
     border: 2.5px solid black;
-} */
+}
 
 .back-home {
     width: 60px;
