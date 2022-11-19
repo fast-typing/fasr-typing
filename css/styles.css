@@ -372,7 +372,7 @@ input::-webkit-inner-spin-button {
     left: 51%;
     right: 51%;
     bottom: 0;
-    height: 3px;
+    height: 4px;
     transition-duration: 0.3s;
 }
 
