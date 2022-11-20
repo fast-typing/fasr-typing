@@ -1057,7 +1057,7 @@ nav b {
 
     .text {
         margin-top: 202px;
-        margin-bottom: 125px;
+        margin-bottom: 75px;
         height: 362px;
         font-size: 38px;
     }
@@ -1227,11 +1227,11 @@ nav b {
 
     .logo {
         visibility: hidden;
-        font-size: 28px;
+        font-size: 34px;
     }
 
     .da {
-        margin-left: -37.5px;
+        margin-left: -42.5px;
     }
 
     .logo div::first-letter {
@@ -1271,10 +1271,11 @@ nav b {
 
     .menu__item {
         color: var(--txtMainColor);
+        font-size: 28px;
     }
 
     .menu__item:hover {
-        background-color: #646464;
+        background-color: #9eb0b8;
     }
     
 }
