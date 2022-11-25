@@ -126,6 +126,7 @@ li a {
     color: var(--link3Color);
     font-style: italic;
     transition: .3s;
+    align-items: center;
 }
 
 .logo:hover {

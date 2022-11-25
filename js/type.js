@@ -204,5 +204,5 @@ function restart() {
         randomArr(engText)
     } 
 
-    document.getElementById(`${idName}`).style.borderBottom = '5px solid var(--bgBodyColor)'
+    document.getElementById(`${idName}`).style.borderBottom = '3px solid var(--link2Color)'
 }
