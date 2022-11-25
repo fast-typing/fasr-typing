@@ -1017,12 +1017,18 @@ nav {
 	font-size: 34px;
 	transition: .3s;
     color: var(--txtMainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option img {
+    margin-right: 10px;
+    width: 30px;
 }
 
 .option:hover {
-	padding: 15px;
-	font-size: 34px;
-    background-color: #9eb0b8;
+    background-color: #939ba3;
 }
 
 .margin {
@@ -1045,7 +1051,7 @@ nav {
 .line {
 	width: 25px;
 	background-color: var(--txtMainColor);
-	padding: 1px;
+	padding: 1.5px;
 	margin: 3px 0;
 	border-radius: 10px;
 	transition: .3s;
