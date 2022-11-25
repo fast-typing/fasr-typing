@@ -17,25 +17,24 @@ let oldWords = []
 let NowArr = []
 let arrWords = []
 let inputTime = 60
-let inputWords = 200
+let inputWords = 100
 let topCoor = 374
 if (window.innerWidth <= 700) {
-    topCoor = 324
+    topCoor = 374
 }
-let idName = 1
-let wordCoor
+let idName = 0
 let TochkaOtsheta = 1
 let i = 0
 let start = 0
 let quanSymb = 0
 let zapusk = 0
 let drugoiZapusk = 0
+let nom = 0
 let currTime = inputTime
-let wpm, timerFunc, interFunc
+let wpm, timerFunc, interFunc, wordCoor
 
 engText = engText.split(' ')
 rusText = rusText.split(' ')
-
 
 
 function randomArr(array) {
@@ -45,7 +44,11 @@ function randomArr(array) {
         NowArr.push(array[a]);
     }
 
-    text.innerText = NowArr.join(' ')
+    for (let i = 0; i < NowArr.length - 1; i++) {
+        let word = document.createElement('span')
+        word.innerHTML = `<span id=${i}>${NowArr[i]}</span> `
+        text.innerHTML += word.innerHTML
+    }
 }
 
 randomArr(engText);
@@ -70,9 +73,9 @@ function filter() {
 
 input.addEventListener('input', poleVvode)
 
-function poleVvode() {
-    input.value = this.value.replace(' ', '');
+document.getElementById(`${idName}`).style.borderBottom = '3px solid var(--link2Color)'
 
+function poleVvode() {
     if (start == 0) {
         zapusk = 0
         zapusk++
@@ -80,39 +83,47 @@ function poleVvode() {
         currentTime()
     }
 
+    input.value = input.value.replace('  ', '')
+
     start++
 
-    
+    if (input.value[input.value.length - 1] == ' ' && input.value.length > 1) {
+        wordCurrent = document.getElementById(idName)
+        document.getElementById(`${idName}`).style.borderBottom = '5px solid var(--bgBodyColor)'
 
-    if (NowArr[i] == input.value.toLowerCase()) {
+        if (input.value.toLowerCase() != wordCurrent.innerText + ' ') {
+            // wordCurrent.style.textShadow = '0.5px 0.5px 0.5px red, 1px 1px 0.5px red'
+            wordCurrent.style.textDecoration = 'line-through red'
+            wordCurrent.style.textDecorationThickness = '2px'
+            nom++
+        }
+        else {
+            arrWords.push(NowArr[idName])
+        }
+
+        wordCurrent.style.opacity = '0.4'
+
         input.value = ''
-        let word = document.createElement('span')
-        word.id = idName
-        word.style.opacity = '0.3'
-        word.innerHTML = NowArr[i]
-        oldWords.push(word.outerHTML)
-        arrWords.push(NowArr[i])
-        delete NowArr[i]
-        document.getElementById("text").innerHTML = oldWords.join(' ') + NowArr.join(" ")
         wordCoor = document.getElementById(`${idName}`).getBoundingClientRect()
         i++
         idName++
-        
+
+        document.getElementById(`${idName}`).style.borderBottom = '3px solid var(--link2Color)'
+
         if (window.innerWidth <= 700) {
-            if (document.getElementById(`${TochkaOtsheta}`).getBoundingClientRect().top < wordCoor.top-52) {
-                TochkaOtsheta = word.id
+            if (document.getElementById(`${TochkaOtsheta}`).getBoundingClientRect().top < wordCoor.top - 100) {
+                TochkaOtsheta = wordCurrent.id
                 text.scrollTo({ top: document.getElementById(`${idName - 1}`).getBoundingClientRect().top - topCoor, behavior: 'smooth' })
                 topCoor -= 103
             }
         } else {
-            
-            if (document.getElementById(`${TochkaOtsheta}`).getBoundingClientRect().top < wordCoor.top-27) {
-                TochkaOtsheta = word.id
+            if (document.getElementById(`${TochkaOtsheta}`).getBoundingClientRect().top < wordCoor.top - 27) {
+                TochkaOtsheta = wordCurrent.id
                 text.scrollTo({ top: document.getElementById(`${idName - 1}`).getBoundingClientRect().top - topCoor, behavior: 'smooth' })
                 topCoor -= 54
             }
         }
-        
+
     }
 }
 
@@ -138,12 +149,10 @@ function timer() {
             input.value = ''
             input.setAttribute('disabled', 'disabled')
             input.setAttribute('placeholder', 'time is over!')
-            wpm = Math.round(i / (inputTime / 60))
-            
+            wpm = Math.round(arrWords.length / (inputTime / 60))
 
-            for (c = 0; c < i; c++) {
-                word = arrWords[c]
-                quanSymb += word.length
+            for (c = 0; c < arrWords.length; c++) {
+                quanSymb += arrWords[c].length
             }
 
             resultWPM.style.display = 'flex'
@@ -151,44 +160,49 @@ function timer() {
             resultWPM.classList.add('guideAnimIntro')
             wpmBlock.innerText = `${wpm}`
             cpmBlock.innerText = `${quanSymb / (inputTime / 60)}`
-            timeBlock.innerText = `${inputTime}`
+            timeBlock.innerText = `${nom}`
 
         }, inputTime * 1000);
     }
 }
 
 function restart() {
+    input.value = ''
+    text.innerHTML = ''
     NowArr = []
+    oldWords = []
+    arrWords = []
 
-    if (document.getElementById('rus').checked == true) {
-        randomArr(rusText)
-    } else {
-        randomArr(engText)
-    }
-
-    restartAll()
     currTime = 0;
+    start = 0
+    zapusk = 0
+    i = 0
+    quanSymb = 0
+    TochkaOtsheta = 1
+    idName = 0
+    topCoor = 374
+    nom = 0
+
     input.setAttribute('placeholder', 'write there')
     input.removeAttribute('disabled')
-    input.value = ''
-    oldWords = []
-    start = 0
-}
 
-function restartAll() {
     resultWPM.classList.remove('guideAnimIntro')
     resultWPM.classList.add('guideAnimOutro')
     clearTimeout(timerFunc)
     clearInterval(interFunc)
     divTime.innerHTML = '-- <span class="tooltiptext">time</span>'
-    zapusk = 0
-    i = 0
+
     text.scrollTo({ top: 0 })
-    TochkaOtsheta = 1
-    idName = 1
-    topCoor = 374
+    
     if (window.innerWidth <= 700) {
         topCoor = 324
     }
-    quanSymb = 0
+   
+    if (document.getElementById('rus').checked == true) {
+        randomArr(rusText)
+    } else {
+        randomArr(engText)
+    } 
+
+    document.getElementById(`${idName}`).style.borderBottom = '5px solid var(--bgBodyColor)'
 }

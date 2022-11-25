@@ -1,37 +1,34 @@
 body {
     --bgBodyColor: #adbed2;
     background-color: var(--bgBodyColor);
+    --bgcolor: #f2f3f4;
     color: var(--txtMainColor);
     --txtMainColor: black;     /* Цвет основного текста */
     --link1Color: #ffb471;     /* Цвет 1 ссылки */
     --link2Color: #eb8f90;     /* Цвет 2 ссылки */
     --link3Color: #6363b6;     /* Цвет 3 ссылки */
 }
-
 .themeName1::after {
     color: #76bf57;
 }
-
 .themeName2::after, .themeName3::after {
     color: var(--bgcolor);
 }
-
 form, .text {
     color: var(--txtMainColor);
 }
-
 .dot1 {
     background-color: var(--link1Color);
 }
-
 .dot2 {
     background-color: var(--link2Color);
 }
-
 .dot3 {
     background-color: var(--link3Color);
 }
-
 .ul {
     color: black;
+}
+.restart {
+    background-image: url(/img/undo-black.png);
 }

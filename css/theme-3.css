@@ -8,53 +8,40 @@ body {
     color: var(--txtMainColor);
     --bgcolor: rgb(37, 37, 37);
 }
-
 .result div {
     background-image: url(/img/close-white.png);
 }
-
 .themeName3::after {
     color: #76bf57;
 }
-
 .themeName1::after, .themeName2::after {
     color: var(--bgcolor);
 }
-
 form, input, .nav-link, .text  {
     color: var(--txtMainColor);
 }
-
 .ul .li{
     background-color: var(--bgcolor);
     color: var(--txtMainColor);
 }
-
-
 .filterAndTypePlace, .help:hover::after, .indicators{
     background-color: var(--bgcolor);
 }
-
 .restart {
     background-image: url(/img/undo-white.png) /* made by Rahul Kaklotar */
 }
-
 .dot1 {
     background-color: var(--link1Color);
 }
-
 .dot2 {
     background-color: var(--link2Color);
 }
-
 .dot3 {
     background-color: var(--link3Color);
 }
-
 .submitButton {
     border-color: var(--txtMainColor);
 }
-
 .submitButton:hover {
 	background: #9fd289;
     box-shadow: 0 0 8px 1px #76bf57;
