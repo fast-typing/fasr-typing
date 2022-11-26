@@ -36,6 +36,10 @@ let wpm, timerFunc, interFunc, wordCoor
 engText = engText.split(' ')
 rusText = rusText.split(' ')
 
+function changeWord(){
+    document.getElementById(`${idName}`).style.borderBottom = '2px solid var(--txtMainColor)'
+    // document.getElementById(`${idName}`).style.setProperty('--bottomColor', 'var(--txtMainColor)')
+}
 
 function randomArr(array) {
     array.sort(() => Math.random() - 0.5)
@@ -56,7 +60,7 @@ randomArr(engText);
 function filter() {
     inputTime = document.getElementById('time').value
     currTime = 0
-    restartAll()
+    restart()
 
     if (inputTime == '') {
         inputTime = 30;
@@ -73,9 +77,10 @@ function filter() {
 
 input.addEventListener('input', poleVvode)
 
-document.getElementById(`${idName}`).style.borderBottom = '3px solid var(--link2Color)'
+changeWord()
 
 function poleVvode() {
+
     if (start == 0) {
         zapusk = 0
         zapusk++
@@ -85,16 +90,27 @@ function poleVvode() {
 
     input.value = input.value.replace('  ', '')
 
+    wordCurrent = document.getElementById(idName)
     start++
 
+    if (input.value.slice(0, input.value.length) != wordCurrent.innerText.slice(0, input.value.length)) {
+        document.getElementById(`${idName}`).style.color = '#d92139'
+        document.getElementById(`${idName}`).style.borderBottom = '2px solid #d92139'
+        // document.getElementById(`${idName}`).style.setProperty('--bottomColor', 'red')
+
+    } else {
+        changeWord()  
+        document.getElementById(`${idName}`).style.color = 'var(--txtMainColor)'
+        document.getElementById(`${idName}`).style.borderBottom = '2px solid var(--txtMainColor)'
+    }
+
     if (input.value[input.value.length - 1] == ' ' && input.value.length > 1) {
-        wordCurrent = document.getElementById(idName)
-        document.getElementById(`${idName}`).style.borderBottom = '5px solid var(--bgBodyColor)'
+        document.getElementById(`${idName}`).style.borderBottom = '2px solid  var(--bgBodyColor)'
+        // document.getElementById(`${idName}`).style.setProperty('--bottomColor', 'transperet')
 
         if (input.value.toLowerCase() != wordCurrent.innerText + ' ') {
-            // wordCurrent.style.textShadow = '0.5px 0.5px 0.5px red, 1px 1px 0.5px red'
-            wordCurrent.style.textDecoration = 'line-through red'
-            wordCurrent.style.textDecorationThickness = '2px'
+            wordCurrent.style.textDecoration = 'line-through #d92139'
+            wordCurrent.style.textDecorationThickness = '3px'
             nom++
         }
         else {
@@ -105,10 +121,11 @@ function poleVvode() {
 
         input.value = ''
         wordCoor = document.getElementById(`${idName}`).getBoundingClientRect()
+        document.getElementById(`${idName}`).style.color = 'var(--txtMainColor)'
         i++
         idName++
 
-        document.getElementById(`${idName}`).style.borderBottom = '3px solid var(--link2Color)'
+        changeWord()
 
         if (window.innerWidth <= 700) {
             if (document.getElementById(`${TochkaOtsheta}`).getBoundingClientRect().top < wordCoor.top - 100) {
@@ -204,5 +221,5 @@ function restart() {
         randomArr(engText)
     } 
 
-    document.getElementById(`${idName}`).style.borderBottom = '3px solid var(--link2Color)'
+    changeWord()
 }

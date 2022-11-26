@@ -987,8 +987,25 @@ nav b {
 .text span {
     user-select: none; 
     transition: .2s;
-    border-bottom: 4px solid var(--bgBodyColor);
+    position: relative;
+    border-bottom: 2px solid var(--bgBodyColor);
+    /* --bottomColor: transparent; */
 }
+
+/* .text span::before {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    background-color: var(--bottomColor);
+    background-color: white;
+} */
+
+
+
 
 nav {
 	height: 60px;

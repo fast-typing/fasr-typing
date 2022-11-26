@@ -1,12 +1,13 @@
 body {
     --bgBodyColor: #adbed2;
-    background-color: var(--bgBodyColor);
+    --oppositeColor: white;
     --bgcolor: #f2f3f4;
-    color: var(--txtMainColor);
     --txtMainColor: black;     /* Цвет основного текста */
     --link1Color: #ffb471;     /* Цвет 1 ссылки */
     --link2Color: #eb8f90;     /* Цвет 2 ссылки */
     --link3Color: #6363b6;     /* Цвет 3 ссылки */
+    background-color: var(--bgBodyColor);
+    color: var(--txtMainColor);
 }
 .themeName1::after {
     color: #76bf57;

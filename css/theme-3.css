@@ -1,12 +1,14 @@
 body {
+    --oppositeColor: black;
     --bgBodyColor: rgb(75, 75, 75);
     --txtMainColor: #f2f3f4;     /* Цвет основного текста */
     --link1Color: #d92139;     /* Цвет 1 ссылки */
     --link2Color: #e99a24;     /* Цвет 2 ссылки */
     --link3Color: #10a44a;     /* Цвет 3 ссылки */
+    --bgcolor: rgb(37, 37, 37);
     background-color: var(--bgBodyColor);
     color: var(--txtMainColor);
-    --bgcolor: rgb(37, 37, 37);
+
 }
 .result div {
     background-image: url(/img/close-white.png);
