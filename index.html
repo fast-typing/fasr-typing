@@ -13,6 +13,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+
 </head>
 
 <body id="body">
@@ -27,16 +28,14 @@
             <span class="line line-3"></span>
         </div>
         <div class="options">
-            <a class="option" href='index.html'> <img src="/img/main-menu.png" alt=""> main</a>
-            <a class="option" href='home.html'> <img src="/img/home.png" alt=""> home</a>
+            <a class="option" href='index.html'> <img src="/img/home.png" alt=""> main</a>
             <a class="option" href='colors.html'> <img src="/img/theme.png" alt=""> themes</a>
-            <a class="option" href='leaderboard.html'> <img src="/img/podium.png" alt=""> leaderboard</a>
-            <a class="option" href='login.html'> <img src="/img/enter.png" alt=""> registration</a>
+            <a class="option" href='contacts.html'> <img src="/img/main-menu.png" alt=""> contacts</a>
         </div>
         <nav class="krut" style="--order: 2">
-            <a href='home.html' class="nav-link link-1 "> home</a>
+            <a href='index.html' class="nav-link link-1 "> home</a>
             <a href='colors.html' class="nav-link link-2 ">themes</a>
-            <a href='leaderboard.html' class="nav-link link-3">leaderboard</a>
+            <a href='contacts.html' class="nav-link link-3">contacts</a>
             <a href='login.html' class=" nav-link logo-wrapper"></a>
             <b class=" tooltip" id="network" style="--order: 2.5"><span class="tooltiptext"
                     id="networkText">offline</span></b>
@@ -45,13 +44,13 @@
     <main id="main">
         <div class="text moveTop" id="text">
         </div>
-        <div class="filters flex" id='forms'>
-            <div class="filter-time moveTop filter" style="--order: 1.5">
+        <div class="filters flex krut" id='forms'>
+            <div class="filter-time filter">
                 <label> Time (sec): </label>
                 <input class="inputColor1" id="time" type="number" min="30" max="180" placeholder="30-180" value="60"
                     onchange="filter()">
             </div>
-            <div class="filter-language moveTop filter glup" style="--order: 1.5">
+            <div class="filter-language filter glup">
                 <label>Choose your language:</label>
                 <input type="radio" name="browser" id="eng" onclick="restart()" checked class="radio">
                 <label>English</label>

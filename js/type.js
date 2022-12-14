@@ -17,7 +17,7 @@ let oldWords = []
 let NowArr = []
 let arrWords = []
 let inputTime = 60
-let inputWords = 100
+let inputWords = 250
 let topCoor = 374
 if (window.innerWidth <= 700) {
     topCoor = 374
@@ -30,13 +30,14 @@ let quanSymb = 0
 let zapusk = 0
 let drugoiZapusk = 0
 let nom = 0
+let currentWordText = 0
 let currTime = inputTime
 let wpm, timerFunc, interFunc, wordCoor
 
 engText = engText.split(' ')
 rusText = rusText.split(' ')
 
-function changeWord(){
+function changeWord() {
     document.getElementById(`${idName}`).style.borderBottom = '2px solid var(--txtMainColor)'
     // document.getElementById(`${idName}`).style.setProperty('--bottomColor', 'var(--txtMainColor)')
 }
@@ -93,6 +94,24 @@ function poleVvode() {
     wordCurrent = document.getElementById(idName)
     start++
 
+    // ArraySymbols = wordCurrent.innerText.split('')
+    // console.log(ArraySymbols)
+
+    // if (currentWordText != wordCurrent.innerText) {
+    //     wordCurrent.innerHTML = ''
+    //     for (let i = 0; i < ArraySymbols.length; i++) {
+    //         let symbol = document.createElement('span')
+    //         symbol.innerHTML = `<span id=${i + '000'}>${ArraySymbols[i]}</span>`
+    //         wordCurrent.innerHTML += symbol.innerHTML
+    //     }
+    // }
+    // currentWordText = wordCurrent.innerText
+
+    // if (input.value[input.value.length - 1] == ArraySymbols[input.value.length - 1]) {
+    //     // document.getElementById(`${input.value.length-1}+'000'`).style.opacity = '0.3'
+    //     console.log(document.getElementById(`${input.value.length - 1}+'000'`))
+    // }
+
     if (input.value.slice(0, input.value.length) != wordCurrent.innerText.slice(0, input.value.length)) {
         document.getElementById(`${idName}`).style.color = '#d92139'
         document.getElementById(`${idName}`).style.borderBottom = '2px solid #d92139'
@@ -140,6 +159,11 @@ function poleVvode() {
                 topCoor -= 54
             }
         }
+
+        // for (let i = 0; i < ArraySymbols.length; i++) {
+        //     // document.getElementById('0000').outerHTML = ''
+        // }
+        // ArraySymbols = []
 
     }
 }
@@ -210,16 +234,16 @@ function restart() {
     divTime.innerHTML = '-- <span class="tooltiptext">time</span>'
 
     text.scrollTo({ top: 0 })
-    
+
     if (window.innerWidth <= 700) {
         topCoor = 324
     }
-   
+
     if (document.getElementById('rus').checked == true) {
         randomArr(rusText)
     } else {
         randomArr(engText)
-    } 
+    }
 
     changeWord()
 }
