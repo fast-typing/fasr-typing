@@ -44,6 +44,14 @@
     <main id="main">
         <div class="text moveTop" id="text">
         </div>
+        <div class="flex filterAndTypePlace krut">
+            <div class="curTime tooltip" id="curTime"> -- <span class="tooltiptext">time</span> </div>
+            <div class="tooltip restartDiv"> <span class="tooltiptext">restart</span> <button class="restart"
+                    onclick="restart()"> </button></div>
+            <input class="inputColor2" id="poleVvode" type="text" placeholder="write there">
+            <button class="submitButton tooltip" id="filter" onclick="filterShowHide()"> options <span
+                    class="tooltiptext">show/hide</span> </button>
+        </div>
         <div class="filters flex krut" id='forms'>
             <div class="filter-time filter">
                 <label> Time (sec): </label>
@@ -73,14 +81,7 @@
             <img src="/img/close-black.png" class="close" onclick="restart()">
         </div>
     </main>
-    <div class="flex filterAndTypePlace krut">
-        <div class="curTime tooltip" id="curTime"> -- <span class="tooltiptext">time</span> </div>
-        <div class="tooltip restartDiv"> <span class="tooltiptext">restart</span> <button class="restart"
-                onclick="restart()"> </button></div>
-        <input class="inputColor2" id="poleVvode" type="text" placeholder="write there">
-        <button class="submitButton tooltip" id="filter" onclick="filterShowHide()"> options <span
-                class="tooltiptext">show/hide</span> </button>
-    </div>
+    
 
     <div class="help krut" onclick="guide()"> </div>
 
