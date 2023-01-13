@@ -1,0 +1,214 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+* {
+  font-family: Montserrat;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  margin: 0;
+}
+
+header, header img{
+  width: 100%;
+}
+
+footer, footer img{
+  width: 100%;
+}
+
+footer {
+  margin-top: 250px;
+  width: 100%;
+}
+
+main {
+  margin: 0 16.5%;
+  margin-top: 80px;
+}
+
+.button__red img {
+  width: 20px;
+}
+
+.left-button {
+  transform: rotate(90deg);
+}
+
+.right-button {
+  transform: rotate(-90deg);
+}
+
+.selections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.model-3D {
+  width: 100%;
+}
+
+.choices-menu {
+  background-color: #0C0C0C;
+  padding: 30px;
+  border: 1px solid #282828;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  flex-wrap: wrap;
+}
+
+.dot {
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  z-index: 1;
+  display: block;
+  position: absolute;
+
+}
+
+.dot-left-top {
+  left: -1px;
+  top: -1px;
+}
+.dot-left-bottom {
+  left: -1px;
+  bottom: -1px;
+}
+.dot-right-bottom {
+  right: -1px;
+  bottom: -1px;
+}
+.dot-right-top {
+  right: -1px;
+  top: -1px;
+}
+
+select {
+  background-color: #111;
+  border: 1px solid #282828;
+  width: 18%;
+  min-width: 120px;
+  padding: 14px;
+  -webkit-appearance: none;
+  background-image: url(/src/img/little-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 92% 17px;
+  /* margin: 5px 20px; */
+}
+
+select:focus {
+  outline: none;
+}
+
+select::before {
+  content: '';
+  background-color: white;
+  /* border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: white transparent transparent transparent; */
+}
+
+.splide__slide {
+  opacity: .4;
+  text-transform: uppercase;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.splide__slide img {
+  opacity: 0;
+  position: absolute;
+  top: 100px;
+  width: 300%;
+}
+
+ul .is-active img {
+  opacity: 1;
+}
+
+.splide__track .splide__list {
+  height: 550px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+.splide__track {
+  margin: 0 60px;
+}
+
+.is-active {
+  opacity: 1;
+  font-size: 24px;
+}
+
+.splide__arrows .splide__arrow {
+  background-image: url(/src/img/arrow.png);
+  background-size: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  background-color: #390F15;
+  border: 2px solid #ED1C24;
+  padding: 15px;
+  transition: .2s;
+  top: -2px;
+}
+
+.splide__arrow:hover {
+  background-color: #ED1C24;
+}
+
+.splide__arrows .splide__arrow--prev {
+  transform: rotate(90deg);
+  left: 0;
+}
+
+.splide__arrows .splide__arrow--next {
+  transform: rotate(-90deg);
+  right: 0;
+}
+
+.button__red {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  width: fit-content;
+  transition: .2s;
+}
+
+.button__red:hover {
+  background-color: #ED1C24;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list li:hover {
+  color: white;
+  background-color: #EF0027 !important;
+}
+
+.css-1hq7vnc-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  border: solid 1px #EF0027 p !important;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.option-title {
+  font-size: 18px;
+  line-height: 24px;
+  color: #A6ABB1;
+  margin-bottom: 10px;
+}
