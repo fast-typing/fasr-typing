@@ -1,92 +1,29 @@
-import DropDownMenu from './components/medium/dropDownMenu';
-import Slider from './components/medium/slider'
-import header from '../src/img/header.jpg'
-import footer from '../src/img/footer.jpg'
-import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
-
+import Scene from './components/Babylon/Scene';
+import Select from './components/select/Select';
+import 'babylonjs-loaders';
+import change_model from './components/Babylon/Scene'
 
 function App() {
-  return (
-    <div className='body'>
-      <header>
-        <img src={header} />
-      </header>
-      <main>
-        <div className='options'>
-          <div className='option-block'>
-            <h3 className='option-title'>Гравировка</h3>
-            <FormControl>
-              <Select
-                sx={{
-                  width: 200,
-                  height: 40,
-                }}
-                variant="outlined"
-              >
-                <MenuItem value={'Отсутствует'}>Отсутствует</MenuItem>
-                <MenuItem value={'Сюжеты'}>Сюжеты</MenuItem>
-                <MenuItem value={'Инициалы'}>Инициалы</MenuItem>
-                <MenuItem value={'Орнаменты'}>Орнаменты</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          <div className='option-block'>
-            <h3 className='option-title'>Резьба по дереву</h3>
-            <FormControl>
-              <Select
-                sx={{
-                  width: 200,
-                  height: 40,
-                }}
-                variant="outlined"
-              >
-                <MenuItem value={'Отсутствует'}>Отсутствует</MenuItem>
-                <MenuItem value={'Сюжеты'}>Сюжеты</MenuItem>
-                <MenuItem value={'Инициалы'}>Инициалы</MenuItem>
-                <MenuItem value={'Орнаменты'}>Орнаменты</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          <div className='option-block'>
-            <h3 className='option-title'>Надписи</h3>
-            <FormControl>
-              <Select
-                sx={{
-                  width: 200,
-                  height: 40,
-                }}
-                variant="outlined"
-              >
-                <MenuItem value={'Отсутствует'}>Отсутствует</MenuItem>
-                <MenuItem value={'Сюжеты'}>Сюжеты</MenuItem>
-                <MenuItem value={'Инициалы'}>Инициалы</MenuItem>
-                <MenuItem value={'Орнаменты'}>Орнаменты</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          <div className='option-block'>
-            <h3 className='option-title'>Аксессуары</h3>
-            <FormControl>
-              <Select
-                sx={{
-                  width: 200,
-                  height: 40,
-                }}
-                variant="outlined"
-              >
-                <MenuItem value={'Отсутствует'}>Отсутствует</MenuItem>
-                <MenuItem value={'Сюжеты'}>Сюжеты</MenuItem>
-                <MenuItem value={'Инициалы'}>Инициалы</MenuItem>
-                <MenuItem value={'Орнаменты'}>Орнаменты</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-        </div>
-      </main>
+  const options = document.querySelectorAll('option')
+  options.forEach(el => {
+    el.addEventListener('click', change_model(`${el.value}`))
+  })
 
-      <footer>
-        <img src={footer} />
-      </footer>
+  return (
+    <div id='body'>
+      <Scene></Scene>
+      <main>
+        {/* <button className='gun-name' onClick={() => change_model('spas12')}>DOA-56</button> */}
+        <Select/>
+        {/* <select>
+          <option value={'ak47.glb'} className={'option'}>
+            ak47
+          </option>
+          <option value={'m14.glb'} className={'option'}>
+            m14
+          </option>
+        </select> */}
+      </main>
     </div>
   );
 }
